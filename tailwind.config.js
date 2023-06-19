@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				lightBlue: '#5249ff'
+				lightBlue: '#5249ff',
+				softCyan: '#5FF7F2'
 			},
 			screens: {
 				sm: '640px',

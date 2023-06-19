@@ -51,7 +51,7 @@ function Navbar() {
 					</ul>
 
 					<button className="group relative flex items-center justify-center overflow-hidden rounded-full border border-white px-7 py-2 opacity-80 transition duration-150 hover:opacity-100">
-						<div className="absolute inset-0 -translate-x-32 bg-white transition delay-75 duration-300 ease-in-out group-hover:translate-x-0" />
+						<div className="absolute inset-0 -translate-x-96 bg-white transition duration-300 ease-in-out group-hover:translate-x-0" />
 						<a className="z-10 text-white transition delay-100 duration-200 group-hover:text-black">
 							{t('resume')}
 						</a>

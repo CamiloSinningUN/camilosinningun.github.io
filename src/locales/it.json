@@ -4,5 +4,13 @@
 		"projects": "Progetti",
 		"contactme": "Contattami",
 		"resume": "Curriculum"
+	},
+	"hero": {
+		"greetings": "Ciao, il mio nome è",
+		"subtitle": "Programmazione per",
+		"web": "Web",
+		"mobile": "Mobile",
+		"description": "Studente di Ingegneria dei Sistemi, interessato all'Apprendimento Automatico e allo sviluppo web/mobile, aspirante a imparare e fare un impatto nella tecnologia.",
+		"button": "Contattami"
 	}
 }

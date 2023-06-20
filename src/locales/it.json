@@ -12,5 +12,10 @@
 		"mobile": "Mobile",
 		"description": "Studente di Ingegneria dei Sistemi, interessato all'Apprendimento Automatico e allo sviluppo web/mobile, aspirante a imparare e fare un impatto nella tecnologia.",
 		"button": "Contattami"
+	},
+	"title": {
+		"skills": "Competenze",
+		"projects": "Progetti",
+		"contactme": "Contattami"
 	}
 }

@@ -15,7 +15,8 @@ export default defineConfig({
 			'@utils': path.resolve(__dirname, './src/core/utils'),
 			'@locales': path.resolve(__dirname, './src/locales'),
 			'@sections': path.resolve(__dirname, './src/sections'),
-			'@components': path.resolve(__dirname, './src/shared/components')
+			'@components': path.resolve(__dirname, './src/shared/components'),
+			'@contexts': path.resolve(__dirname, './src/core/contexts')
 		}
 	}
 });

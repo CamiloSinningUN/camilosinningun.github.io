@@ -1,6 +1,6 @@
 import Logo from '@images/Logo.png';
 import Item from './Item';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -18,15 +18,32 @@ function Navbar() {
 		visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }
 	};
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollPosition = window.scrollY;
+			if (scrollPosition > window.innerHeight - 50) {
+				setShowBackground(true);
+			} else {
+				setShowBackground(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="fixed w-full px-11 py-4">
+		<div className="fixed z-10 w-full px-11 py-4">
 			<motion.nav
 				variants={navbarVariants}
 				initial="hidden"
 				animate="visible"
 				className={`top-7 mx-11 flex items-center justify-between px-4 py-3 ${
 					showBackground &&
-					'rounded-lg bg-black bg-opacity-30 backdrop-blur-sm'
+					'rounded-lg bg-black bg-opacity-30 shadow-lg backdrop-blur-sm'
 				}`}
 			>
 				<a href="">
@@ -58,6 +75,9 @@ function Navbar() {
 					</button>
 				</motion.div>
 			</motion.nav>
+			{showBackground && (
+				<div className="mx-auto h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20" />
+			)}
 		</div>
 	);
 }

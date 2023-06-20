@@ -1,12 +1,19 @@
+import AnimatedCursor from 'react-animated-cursor';
 import Navbar from '@components/Navbar';
 import LanguageSwitch from '@components/LanguageSwitch';
+import Title from '@components/Title';
 import Hero from '@sections/Hero';
+import Skills from '@sections/Skills';
+import Projects from '@sections/Projects';
+import Contactme from '@sections/Contactme';
 
-import AnimatedCursor from 'react-animated-cursor';
+import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
+	const { skillsRef, projectsRef, contactmeRef } = useObserverSections();
+
 	return (
-		<div className="relative bg-lightBlue">
+		<div className="relative">
 			<AnimatedCursor
 				color="174, 248, 189"
 				showSystemCursor={true}
@@ -21,8 +28,22 @@ function App() {
 			<LanguageSwitch type="top" />
 			<LanguageSwitch type="bottom" />
 			<Navbar />
-			<div className="mx-auto max-w-screen-xl">
-				<Hero />
+			<Title />
+			<div className="fixed -z-10 w-full bg-lightBlue">
+				<div className="mx-auto max-w-screen-xl">
+					<Hero />
+				</div>
+			</div>
+			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
+				<div ref={skillsRef}>
+					<Skills />
+				</div>
+				<div ref={projectsRef}>
+					<Projects />
+				</div>
+				<div ref={contactmeRef}>
+					<Contactme />
+				</div>
 			</div>
 		</div>
 	);

@@ -12,5 +12,10 @@
 		"mobile": "Mobile",
 		"description": "Systems Engineering student, interested in Machine Learning and web/mobile development, aspiring to learn and make an impact in technology.",
 		"button": "Contact me"
+	},
+	"title": {
+		"skills": "Skills",
+		"projects": "Projects",
+		"contactme": "Contact me"
 	}
 }

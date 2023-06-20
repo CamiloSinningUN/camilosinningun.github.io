@@ -32,7 +32,8 @@
 			"@utils/*": ["src/core/utils/*"],
 			"@locales/*": ["src/locales/*"],
 			"@sections/*": ["src/sections/*"],
-			"@components/*": ["src/shared/components/*"]
+			"@components/*": ["src/shared/components/*"],
+			"@contexts/*": ["src/core/contexts/*"]
 		}
 	},
 	"include": ["src"],

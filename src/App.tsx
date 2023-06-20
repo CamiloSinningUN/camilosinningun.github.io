@@ -6,6 +6,7 @@ import Hero from '@sections/Hero';
 import Skills from '@sections/Skills';
 import Projects from '@sections/Projects';
 import Contactme from '@sections/Contactme';
+import Footer from '@components/Footer';
 
 import useObserverSections from '@hooks/useObserveSections';
 
@@ -44,6 +45,7 @@ function App() {
 				<div ref={contactmeRef}>
 					<Contactme />
 				</div>
+				<Footer />
 			</div>
 		</div>
 	);

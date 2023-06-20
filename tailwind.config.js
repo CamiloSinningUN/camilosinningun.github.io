@@ -15,7 +15,9 @@ export default {
 				veryDarkGray: '#111111',
 				verySoftLimeGreen: '#ACF8BB',
 				verySoftCyan: '#ACF8EF',
-				verySoftBlue: '#ACB4F8'
+				verySoftBlue: '#ACB4F8',
+				brightViolet: '#662DDD',
+				darkViolet: '#3904AB'
 			},
 			screens: {
 				sm: '640px',

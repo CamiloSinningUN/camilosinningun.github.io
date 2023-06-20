@@ -6,6 +6,7 @@ function Footer() {
 				<a
 					className="font-bold text-softCyan"
 					href="https://github.com/CamiloSinningUN"
+					target="_blank"
 				>
 					Camilo Sinning
 				</a>

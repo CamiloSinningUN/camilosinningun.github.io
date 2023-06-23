@@ -8,7 +8,7 @@ function Skills() {
 	>('Mobile');
 
 	return (
-		<div className=" mt-40 flex h-screen justify-center gap-20 text-white">
+		<div className=" mt-40 flex h-screen justify-between gap-20 text-white">
 			<div className="relative flex h-[708px] w-[446px]  rounded-lg border border-white bg-brightViolet p-7">
 				<h2
 					className="absolute bottom-0 left-[505px] -rotate-90 select-none text-[160px] font-black tracking-tighter text-darkViolet opacity-50"

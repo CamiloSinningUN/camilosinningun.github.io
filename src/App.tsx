@@ -31,21 +31,23 @@ function App() {
 			<Navbar />
 			<Title />
 			<div className="fixed -z-10 w-full bg-lightBlue">
-				<div className="mx-auto max-w-screen-xl">
+				<div className="mx-auto max-w-screen-lg">
 					<Hero />
 				</div>
 			</div>
-			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
-				<div ref={skillsRef}>
-					<Skills />
+			<div className="absolute top-[100vh] w-full  bg-veryDarkGray">
+				<div className="mx-auto max-w-screen-lg">
+					<div ref={skillsRef}>
+						<Skills />
+					</div>
+					<div ref={projectsRef}>
+						<Projects />
+					</div>
+					<div ref={contactmeRef}>
+						<Contactme />
+					</div>
+					<Footer />
 				</div>
-				<div ref={projectsRef}>
-					<Projects />
-				</div>
-				<div ref={contactmeRef}>
-					<Contactme />
-				</div>
-				<Footer />
 			</div>
 		</div>
 	);

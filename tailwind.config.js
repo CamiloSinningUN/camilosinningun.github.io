@@ -17,7 +17,13 @@ export default {
 				verySoftCyan: '#ACF8EF',
 				verySoftBlue: '#ACB4F8',
 				brightViolet: '#662DDD',
-				darkViolet: '#3904AB'
+				darkViolet: '#3904AB',
+				darkCyanLimeGreen: '#0f8944',
+				brightCyanLimeGreen: '#3ff896',
+				gray: '#575757',
+				darkGray: '#353535',
+				darkerGray: '#1D1D1D',
+				softViolet: '#A176FB'
 			},
 			screens: {
 				sm: '640px',
@@ -25,6 +31,9 @@ export default {
 				lg: '1024px',
 				xl: '1280px',
 				'2xl': '1536px'
+			},
+			dropShadow: {
+				brightCyanLimeGreen: '-4px 4px 200px rgba(62, 245, 148, 0.8)'
 			}
 		}
 	},

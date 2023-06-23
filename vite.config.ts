@@ -16,7 +16,8 @@ export default defineConfig({
 			'@locales': path.resolve(__dirname, './src/locales'),
 			'@sections': path.resolve(__dirname, './src/sections'),
 			'@components': path.resolve(__dirname, './src/shared/components'),
-			'@contexts': path.resolve(__dirname, './src/core/contexts')
+			'@contexts': path.resolve(__dirname, './src/core/contexts'),
+			'@shapes': path.resolve(__dirname, './src/assets/shapes')
 		}
 	}
 });

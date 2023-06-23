@@ -33,7 +33,8 @@
 			"@locales/*": ["src/locales/*"],
 			"@sections/*": ["src/sections/*"],
 			"@components/*": ["src/shared/components/*"],
-			"@contexts/*": ["src/core/contexts/*"]
+			"@contexts/*": ["src/core/contexts/*"],
+			"@shapes/*": ["src/assets/shapes/*"]
 		}
 	},
 	"include": ["src"],

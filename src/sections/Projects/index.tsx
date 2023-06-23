@@ -24,7 +24,7 @@ function Projects() {
 		<div className="text-white">
 			<div className="relative flex items-center">
 				<div className="absolute h-[362px] w-[680px] overflow-hidden rounded-lg">
-					<div className="duration-400 absolute h-full w-full bg-brightCyanLimeGreen bg-opacity-20 transition delay-75 ease-in-out hover:bg-opacity-0" />
+					<div className="absolute h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0" />
 					<img
 						className="h-[362px] w-[680px]  object-fill"
 						src={EYELAND}
@@ -55,16 +55,26 @@ function Projects() {
 						</div>
 					</div>
 					<div className="mt-3 flex items-stretch gap-2 rounded-lg rounded-se-none bg-darkGray p-2">
-						<a href="">
-							<GoProjectSymlink className="text-2xl text-white" />
+						<a
+							href="https://proyecto-final-epics.github.io/EyelandWebPage/"
+							target="_blank"
+						>
+							<GoProjectSymlink className="text-2xl text-white opacity-80 hover:opacity-100" />
 						</a>
 						<div className="w-0.5 bg-white bg-opacity-20" />
-						<a href="">
-							<HiOutlineDocumentMagnifyingGlass className="text-2xl text-white" />
+						<a
+							href="/files/Sinning_Vergara_Lizcano.pdf"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<HiOutlineDocumentMagnifyingGlass className="text-2xl text-white opacity-80 hover:opacity-100" />
 						</a>
 						<div className="w-0.5 bg-white bg-opacity-20" />
-						<a href="">
-							<LuGithub className="text-2xl text-white" />
+						<a
+							href="https://github.com/Proyecto-Final-EPICS/EyelandApp"
+							target="_blank"
+						>
+							<LuGithub className="text-2xl text-white opacity-80 hover:opacity-100" />
 						</a>
 					</div>
 				</div>

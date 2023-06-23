@@ -44,7 +44,7 @@ function Hero() {
 				{t('description')}
 			</p>
 			<motion.button
-				className="mt-11 h-16 w-60 rounded-lg border border-white text-3xl font-medium text-white"
+				className="mt-11 h-16 w-60 rounded-lg border border-white text-2xl font-bold text-white"
 				whileHover={{
 					scale: 1.05, // Increase the scale slightly on hover
 					boxShadow: '0 0 20px rgba(255, 255, 255, 0.2)', // Add a subtle shadow effect

@@ -35,8 +35,8 @@ function App() {
 					<Hero />
 				</div>
 			</div>
-			<div className="absolute top-[100vh] w-full  bg-veryDarkGray">
-				<div className="mx-auto max-w-screen-lg">
+			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
+				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col gap-80">
 					<div ref={skillsRef}>
 						<Skills />
 					</div>
@@ -45,8 +45,8 @@ function App() {
 					</div>
 					<div ref={contactmeRef}>
 						<Contactme />
+						<Footer />
 					</div>
-					<Footer />
 				</div>
 			</div>
 		</div>

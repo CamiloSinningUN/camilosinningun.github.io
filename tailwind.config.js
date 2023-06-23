@@ -33,7 +33,8 @@ export default {
 				'2xl': '1536px'
 			},
 			dropShadow: {
-				brightCyanLimeGreen: '-4px 4px 200px rgba(62, 245, 148, 0.8)'
+				brightCyanLimeGreen: '-4px 4px 200px rgba(62, 245, 148, 0.8)',
+				strongBlue: '0px 0px 200px rgba(0, 20, 195, 0.7)'
 			}
 		}
 	},

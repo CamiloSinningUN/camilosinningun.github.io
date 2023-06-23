@@ -8,7 +8,7 @@ function Skills() {
 	>('Mobile');
 
 	return (
-		<div className=" mt-40 flex h-screen justify-between gap-20 text-white">
+		<div className="flex justify-between gap-20 text-white">
 			<div className="relative flex h-[708px] w-[446px]  rounded-lg border border-white bg-brightViolet p-7">
 				<h2
 					className="absolute bottom-0 left-[505px] -rotate-90 select-none text-[160px] font-black tracking-tighter text-darkViolet opacity-50"
@@ -39,8 +39,8 @@ function Skills() {
 					/>
 				</div>
 			</div>
-			<div className="flex h-[708px] w-[446px] rounded-lg border border-gray-700 bg-black">
-				<div className="h-full w-10 border-r border-gray-700" />
+			<div className="border-gray-700 flex h-[708px] w-[446px] rounded-lg border bg-black">
+				<div className="border-gray-700 h-full w-10 border-r" />
 				<CodeEditor skill={skillSelected} />
 			</div>
 		</div>

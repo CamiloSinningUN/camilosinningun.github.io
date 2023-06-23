@@ -10,12 +10,7 @@ function Skills() {
 	return (
 		<div className="flex justify-between gap-20 text-white">
 			<div className="relative flex h-[708px] w-[446px]  rounded-lg border border-white bg-brightViolet p-7">
-				<h2
-					className="absolute bottom-0 left-[505px] -rotate-90 select-none text-[160px] font-black tracking-tighter text-darkViolet opacity-50"
-					style={{
-						transformOrigin: 'left bottom'
-					}}
-				>
+				<h2 className="absolute bottom-0 left-[505px] origin-bottom-left -rotate-90 select-none text-[160px] font-black tracking-tighter text-darkViolet opacity-50">
 					{skillSelected.toUpperCase()}
 				</h2>
 				<div className="z-20 flex flex-col gap-20">

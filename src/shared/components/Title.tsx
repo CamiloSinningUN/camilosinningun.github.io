@@ -15,8 +15,7 @@ function Title() {
 				initial={{ opacity: 0, y: 100, rotate: -90 }}
 				animate={{ opacity: 1, y: 0 }}
 				exit={{ opacity: 0 }}
-				className={`fixed bottom-10 left-36 z-10 -rotate-90 text-7xl font-bold text-${section.color}`}
-				style={{ transformOrigin: 'left bottom' }}
+				className={`fixed bottom-10 left-36 z-10 origin-bottom-left -rotate-90 text-7xl font-bold text-${section.color}`}
 			>
 				{t(section.name)}
 			</motion.div>

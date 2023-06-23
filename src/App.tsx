@@ -14,7 +14,7 @@ function App() {
 	const { skillsRef, projectsRef, contactmeRef } = useObserverSections();
 
 	return (
-		<div className="relative">
+		<div className="relative scroll-smooth">
 			<AnimatedCursor
 				color="174, 248, 189"
 				showSystemCursor={true}

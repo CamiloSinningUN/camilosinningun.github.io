@@ -8,9 +8,7 @@
 	src: url('@fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
 }
 
-/* html {
-} */
-
 html {
 	font-family: 'Montserrat';
+	scroll-behavior: smooth;
 }

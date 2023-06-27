@@ -1,21 +1,29 @@
 import Logo from '@images/Logo.png';
 import Item from './Item';
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 function Navbar() {
 	const [showBackground, setShowBackground] = useState(false);
 	const { t } = useTranslation('', { keyPrefix: 'navbar' });
 
-	const navbarVariants = {
-		hidden: { opacity: 0, y: -50 },
-		visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+	const containerVariants = {
+		hidden: {},
+		visible: {
+			transition: {
+				delayChildren: 0,
+				staggerChildren: 0.2
+			}
+		}
 	};
 
 	const itemVariants = {
-		hidden: { opacity: 0, y: -50 },
-		visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }
+		hidden: { y: -20, opacity: 0 },
+		visible: {
+			y: 0,
+			opacity: 1
+		}
 	};
 
 	useEffect(() => {
@@ -38,42 +46,42 @@ function Navbar() {
 	return (
 		<div className="fixed z-10 w-full px-11 py-4">
 			<motion.nav
-				variants={navbarVariants}
-				initial="hidden"
-				animate="visible"
 				className={`top-7 mx-11 flex items-center justify-between px-4 py-3 ${
 					showBackground &&
 					'rounded-lg bg-black bg-opacity-30 shadow-lg backdrop-blur-sm'
 				}`}
+				variants={containerVariants}
+				initial="hidden"
+				animate="visible"
 			>
-				<a href="">
+				<motion.a href="" variants={itemVariants}>
 					<img className="h-8 w-8" src={Logo} alt="Camilo Sinning" />
-				</a>
-				<motion.div
-					variants={itemVariants}
-					initial="hidden"
-					animate="visible"
-					className="auto flex items-center gap-9 text-base font-bold text-white"
-				>
+				</motion.a>
+				<div className="auto flex items-center gap-9 text-base font-bold text-white">
 					<ul className="flex gap-9">
-						<Item>
-							<a href="#skills">{t('skills')}</a>
+						<Item variants={itemVariants}>
+							<a href="#aboutme">{t('aboutme')}</a>
 						</Item>
-						<Item>
+						{/* <Item variants={itemVariants}>
+							<a href="#skills">{t('skills')}</a>
+						</Item> */}
+						<Item variants={itemVariants}>
 							<a href="#projects">{t('projects')}</a>
 						</Item>
-						<Item>
+						<Item variants={itemVariants}>
 							<a href="#contactme">{t('contactme')}</a>
 						</Item>
 					</ul>
 
-					<button className="group relative flex items-center justify-center overflow-hidden rounded-full border border-white px-7 py-2 opacity-80 transition duration-150 hover:opacity-100">
-						<div className="absolute inset-0 -translate-x-96 bg-white transition duration-300 ease-in-out group-hover:translate-x-0" />
-						<a className="z-10 text-white transition delay-100 duration-200 group-hover:text-black">
-							{t('resume')}
-						</a>
-					</button>
-				</motion.div>
+					<motion.div variants={itemVariants}>
+						<button className="group relative flex items-center justify-center overflow-hidden rounded-full border border-white px-7 py-2 transition duration-150 hover:opacity-100">
+							<div className="absolute inset-0 -translate-x-96 bg-white transition duration-300 ease-in-out group-hover:translate-x-0" />
+							<a className="z-10 text-white transition delay-100 duration-200 group-hover:text-black">
+								{t('resume')}
+							</a>
+						</button>
+					</motion.div>
+				</div>
 			</motion.nav>
 			{showBackground && (
 				<div className="mx-auto h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20" />

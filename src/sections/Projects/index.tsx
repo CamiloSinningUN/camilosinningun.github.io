@@ -4,6 +4,8 @@ import { LuGithub } from 'react-icons/lu';
 import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
 import { GoProjectSymlink } from 'react-icons/go';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Span from '@components/Span';
 
 function Projects() {
 	const [overshadowArray, setOvershadowArray] = useState(
@@ -20,9 +22,34 @@ function Projects() {
 		setOvershadowArray(overshadowArrayCopy);
 	};
 
+	const containerVariants = {
+		hidden: {},
+		visible: {
+			transition: {
+				delayChildren: 0.2,
+				staggerChildren: 0.2
+			}
+		}
+	};
+
+	const itemVariants = {
+		hidden: { y: -20, opacity: 0 },
+		visible: {
+			y: 0,
+			opacity: 1
+		}
+	};
+
 	return (
 		<div className="text-white">
-			<div className="relative flex items-center">
+			<motion.div
+				className="relative flex items-center"
+				variants={itemVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
 				<div className="absolute h-[362px] w-[680px] overflow-hidden rounded-lg">
 					<div className="absolute h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0" />
 					<img
@@ -43,12 +70,10 @@ function Projects() {
 					</h4>
 					<div className="w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
 						<p className="text-base font-medium leading-snug">
-							<span className="text-softCyan">
-								Educational program
-							</span>{' '}
-							for high school students for the construction of
-							mobile applications to promote the inclusion of
-							people with visual disabilities.
+							<Span>Educational program</Span> for high school
+							students for the construction of mobile applications
+							to promote the inclusion of people with visual
+							disabilities.
 						</p>
 						<div className="mt-5 text-sm font-black opacity-30">
 							Typescript - React native - Expo - React - Vite
@@ -78,14 +103,22 @@ function Projects() {
 						</a>
 					</div>
 				</div>
-			</div>
-			<div className="mt-40 flex flex-col items-center">
-				<div className="relative mb-12">
-					<h3 className="relative text-center text-4xl font-bold text-softViolet">
-						Other projects
-					</h3>
-					<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />
-				</div>
+			</motion.div>
+			<motion.div
+				className="mt-40 flex flex-col items-center"
+				variants={containerVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.5 }}
+			>
+				<motion.div variants={itemVariants}>
+					<div className="relative mb-12">
+						<h3 className="relative text-center text-4xl font-bold text-softViolet">
+							Other projects
+						</h3>
+						<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />
+					</div>
+				</motion.div>
 				<div className="flex flex-wrap gap-6">
 					{projects.map((project, index) => (
 						<RegularProject
@@ -99,10 +132,33 @@ function Projects() {
 							overshadow={overshadowArray[index]}
 							setSelected={setSelected}
 							index={index}
+							variants={itemVariants}
 						/>
 					))}
 				</div>
-			</div>
+				<motion.div variants={itemVariants}>
+					<div className="group relative mt-10 overflow-hidden transition delay-75 duration-200 ease-in-out hover:scale-105">
+						<a
+							href="https://github.com/CamiloSinningUN?tab=repositories"
+							target="_blank"
+							className=" cursor-pointer font-bold"
+							onMouseEnter={() =>
+								setOvershadowArray(
+									overshadowArray.map(() => true)
+								)
+							}
+							onMouseLeave={() =>
+								setOvershadowArray(
+									overshadowArray.map(() => false)
+								)
+							}
+						>
+							See more...
+						</a>
+						<div className="relative -left-full border-t-2 border-white transition-transform delay-75 duration-200 ease-in-out group-hover:translate-x-full" />
+					</div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 }

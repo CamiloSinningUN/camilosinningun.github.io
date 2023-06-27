@@ -40,7 +40,7 @@ function LanguageSwitch({ type }: Props) {
 			y: -50,
 			rotate: type === 'top' ? 90 : -90
 		},
-		visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+		visible: { opacity: 1, y: 0, transition: { delay: 1 } }
 	};
 
 	return (

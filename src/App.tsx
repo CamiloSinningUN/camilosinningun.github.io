@@ -3,6 +3,7 @@ import Navbar from '@components/Navbar';
 import LanguageSwitch from '@components/LanguageSwitch';
 import Title from '@components/Title';
 import Hero from '@sections/Hero';
+import Aboutme from '@sections/Aboutme';
 import Skills from '@sections/Skills';
 import Projects from '@sections/Projects';
 import Contactme from '@sections/Contactme';
@@ -11,10 +12,11 @@ import Footer from '@components/Footer';
 import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
-	const { skillsRef, projectsRef, contactmeRef } = useObserverSections();
+	const { aboutmeRef, skillsRef, projectsRef, contactmeRef } =
+		useObserverSections();
 
 	return (
-		<div className="relative scroll-smooth">
+		<div className="relative">
 			<AnimatedCursor
 				color="174, 248, 189"
 				showSystemCursor={true}
@@ -36,15 +38,18 @@ function App() {
 				</div>
 			</div>
 			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
-				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col gap-80">
-					<div ref={skillsRef}>
-						<Skills />
+				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col gap-60">
+					<div ref={aboutmeRef} id="aboutme">
+						<Aboutme />
 					</div>
-					<div ref={projectsRef}>
+					{/* <div ref={skillsRef}><Skills /></div> */}
+					<div ref={projectsRef} id="projects">
 						<Projects />
 					</div>
-					<div ref={contactmeRef}>
-						<Contactme />
+					<div>
+						<div ref={contactmeRef} id="contactme">
+							<Contactme />
+						</div>
 						<Footer />
 					</div>
 				</div>

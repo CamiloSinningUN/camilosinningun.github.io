@@ -8,13 +8,21 @@ import {
 
 interface SectionContextProps {
 	section: {
-		name: 'skills' | 'projects' | 'contactme';
-		color: 'verySoftLimeGreen' | 'verySoftCyan' | 'verySoftBlue';
+		name: 'aboutme' | 'skills' | 'projects' | 'contactme';
+		color:
+			| 'verySoftRed'
+			| 'verySoftLimeGreen'
+			| 'verySoftCyan'
+			| 'verySoftBlue';
 	} | null;
 	setSection: Dispatch<
 		SetStateAction<{
-			name: 'skills' | 'projects' | 'contactme';
-			color: 'verySoftLimeGreen' | 'verySoftCyan' | 'verySoftBlue';
+			name: 'aboutme' | 'skills' | 'projects' | 'contactme';
+			color:
+				| 'verySoftRed'
+				| 'verySoftLimeGreen'
+				| 'verySoftCyan'
+				| 'verySoftBlue';
 		} | null>
 	>;
 }

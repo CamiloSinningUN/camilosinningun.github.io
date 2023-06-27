@@ -3,6 +3,9 @@ import useSectionContext from './useSectionContext';
 import { useInView } from 'react-intersection-observer';
 
 const useObserverSections = () => {
+	const [aboutmeRef, aboutmeInView] = useInView({
+		threshold: 0.5
+	});
 	const [skillsRef, skillsInView] = useInView({
 		threshold: 0.5
 	});
@@ -16,10 +19,24 @@ const useObserverSections = () => {
 	const { setSection } = useSectionContext();
 
 	useEffect(() => {
-		if (!skillsInView && !projectsInView && !contactmeInView) {
+		if (
+			!skillsInView &&
+			!projectsInView &&
+			!contactmeInView &&
+			!aboutmeInView
+		) {
 			setSection(null);
 		}
-	}, [skillsInView, projectsInView, contactmeInView]);
+	}, [skillsInView, projectsInView, contactmeInView, aboutmeInView]);
+
+	useEffect(() => {
+		if (aboutmeInView) {
+			setSection({
+				name: 'aboutme',
+				color: 'verySoftRed'
+			});
+		}
+	}, [aboutmeInView, setSection]);
 
 	useEffect(() => {
 		if (skillsInView) {
@@ -49,6 +66,7 @@ const useObserverSections = () => {
 	}, [contactmeInView, setSection]);
 
 	return {
+		aboutmeRef,
 		skillsRef,
 		projectsRef,
 		contactmeRef

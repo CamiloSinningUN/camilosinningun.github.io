@@ -1,5 +1,6 @@
 {
 	"navbar": {
+		"aboutme": "Chi sono",
 		"skills": "Competenze",
 		"projects": "Progetti",
 		"contactme": "Contattami",
@@ -14,6 +15,7 @@
 		"button": "Contattami"
 	},
 	"title": {
+		"aboutme": "Chi sono",
 		"skills": "Competenze",
 		"projects": "Progetti",
 		"contactme": "Contattami"

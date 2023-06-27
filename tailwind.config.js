@@ -5,7 +5,8 @@ export default {
 		'text-softCyan',
 		'text-verySoftCyan',
 		'text-verySoftBlue',
-		'text-verySoftLimeGreen'
+		'text-verySoftLimeGreen',
+		'text-verySoftRed'
 	],
 	theme: {
 		extend: {
@@ -23,7 +24,8 @@ export default {
 				gray: '#575757',
 				darkGray: '#353535',
 				darkerGray: '#1D1D1D',
-				softViolet: '#A176FB'
+				softViolet: '#A176FB',
+				verySoftRed: '#f8acac'
 			},
 			screens: {
 				sm: '640px',
@@ -35,6 +37,12 @@ export default {
 			dropShadow: {
 				brightCyanLimeGreen: '-4px 4px 200px rgba(62, 245, 148, 0.8)',
 				strongBlue: '0px 0px 200px rgba(0, 20, 195, 0.7)'
+			},
+			boxShadow: {
+				white: '0px 0px 10px rgba(255, 255, 255, 0.2)'
+			},
+			listStyleType: {
+				square: 'square'
 			}
 		}
 	},

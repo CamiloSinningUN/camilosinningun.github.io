@@ -1,5 +1,6 @@
 {
 	"navbar": {
+		"aboutme": "About me",
 		"skills": "Skills",
 		"projects": "Projects",
 		"contactme": "Contact me",
@@ -14,6 +15,7 @@
 		"button": "Contact me"
 	},
 	"title": {
+		"aboutme": "About me",
 		"skills": "Skills",
 		"projects": "Projects",
 		"contactme": "Contact me"

@@ -38,7 +38,7 @@ function Hero() {
 
 	return (
 		<motion.div
-			className="flex h-screen flex-col justify-center"
+			className="flex h-auto min-h-screen flex-col px-4 pt-28 text-center sm:justify-center lg:text-start"
 			variants={containerVariants}
 			initial={'hidden'}
 			animate={'visible'}
@@ -52,11 +52,11 @@ function Hero() {
 				</h1>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<h2 className="mb-8 mt-2 flex text-6xl font-bold tracking-tight text-white opacity-50">
+				<h2 className="mb-8 mt-4 flex flex-wrap justify-center gap-2 text-6xl font-bold tracking-tight text-white opacity-50 lg:mt-2 lg:justify-start">
 					{t('subtitle')}{' '}
 					<TextTransition
 						springConfig={presets.wobbly}
-						className="ml-3"
+						className="lg:ml-3"
 					>
 						{TEXTS[index % TEXTS.length]}
 					</TextTransition>
@@ -64,7 +64,7 @@ function Hero() {
 				</h2>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<p className="opactity-80 w-[500px] text-xl text-white">
+				<p className="opactity-80 w-full max-w-[500px] text-xl text-white">
 					{t('description')}
 				</p>
 			</motion.div>

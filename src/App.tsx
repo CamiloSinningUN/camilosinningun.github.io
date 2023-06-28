@@ -15,7 +15,7 @@ function App() {
 		useObserverSections();
 
 	return (
-		<div className="relative">
+		<div className="relative overflow-x-clip">
 			<AnimatedCursor
 				color="174, 248, 189"
 				showSystemCursor={true}
@@ -31,8 +31,8 @@ function App() {
 			<LanguageSwitch type="bottom" />
 			<Navbar />
 			<Title />
-			<div className="fixed -z-10 w-full bg-lightBlue">
-				<div className="mx-auto max-w-screen-lg">
+			<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
+				<div className="mx-auto max-w-screen-lg justify-start">
 					<Hero />
 				</div>
 			</div>

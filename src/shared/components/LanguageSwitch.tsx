@@ -1,39 +1,13 @@
 import { Variants, motion } from 'framer-motion';
 
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-
-const Languages = {
-	en: { name: 'English' },
-	es: { name: 'Español' },
-	it: { name: 'Italiano' }
-};
+import useLanguage from '@hooks/useLanguage';
 
 interface Props {
 	type: 'top' | 'bottom';
 }
 
 function LanguageSwitch({ type }: Props) {
-	const { i18n } = useTranslation();
-	const [language, setLanguage] = useState(
-		i18n.language === 'en'
-			? Languages['en']
-			: i18n.language === 'es'
-			? Languages['es']
-			: Languages['it']
-	);
-
-	const changeLanguage = () => {
-		console.log(i18n.language);
-		const newLanguage =
-			i18n.language === 'en'
-				? 'es'
-				: i18n.language === 'es'
-				? 'it'
-				: 'en';
-		i18n.changeLanguage(newLanguage);
-		setLanguage(Languages[newLanguage]);
-	};
+	const { language, changeLanguage } = useLanguage();
 
 	const containerVariants: Variants = {
 		hidden: {
@@ -46,7 +20,7 @@ function LanguageSwitch({ type }: Props) {
 
 	return (
 		<motion.div
-			className={`fixed z-10 flex items-center ${
+			className={`fixed z-10 hidden items-center lg:flex ${
 				type === 'top'
 					? '-left-[8px] top-[180px] rotate-90'
 					: 'bottom-[118px] right-0 -rotate-90'

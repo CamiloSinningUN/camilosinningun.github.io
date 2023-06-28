@@ -1,6 +1,7 @@
+import { AnimatePresence, motion } from 'framer-motion';
+
 import useSectionContext from '@hooks/useSectionContext';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
 
 function Title() {
 	const { section } = useSectionContext();

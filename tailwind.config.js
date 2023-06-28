@@ -25,7 +25,8 @@ export default {
 				darkGray: '#353535',
 				darkerGray: '#1D1D1D',
 				softViolet: '#A176FB',
-				verySoftRed: '#f8acac'
+				verySoftRed: '#f8acac',
+				darkBlue: '#292486'
 			},
 			screens: {
 				sm: '640px',

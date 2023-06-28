@@ -1,14 +1,13 @@
-import AnimatedCursor from 'react-animated-cursor';
-import Navbar from '@components/Navbar';
-import LanguageSwitch from '@components/LanguageSwitch';
-import Title from '@components/Title';
-import Hero from '@sections/Hero';
 import Aboutme from '@sections/Aboutme';
-import Skills from '@sections/Skills';
-import Projects from '@sections/Projects';
+import AnimatedCursor from 'react-animated-cursor';
 import Contactme from '@sections/Contactme';
 import Footer from '@components/Footer';
-
+import Hero from '@sections/Hero';
+import LanguageSwitch from '@components/LanguageSwitch';
+import Navbar from '@components/Navbar';
+import Projects from '@sections/Projects';
+import Skills from '@sections/Skills';
+import Title from '@components/Title';
 import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
@@ -38,20 +37,18 @@ function App() {
 				</div>
 			</div>
 			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
-				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col gap-60">
-					<div ref={aboutmeRef} id="aboutme">
+				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col">
+					<div ref={aboutmeRef} id="aboutme" className="py-32">
 						<Aboutme />
 					</div>
 					{/* <div ref={skillsRef}><Skills /></div> */}
-					<div ref={projectsRef} id="projects">
+					<div ref={projectsRef} id="projects" className="py-32">
 						<Projects />
 					</div>
-					<div>
-						<div ref={contactmeRef} id="contactme">
-							<Contactme />
-						</div>
-						<Footer />
+					<div ref={contactmeRef} id="contactme" className="py-32">
+						<Contactme />
 					</div>
+					<Footer />
 				</div>
 			</div>
 		</div>

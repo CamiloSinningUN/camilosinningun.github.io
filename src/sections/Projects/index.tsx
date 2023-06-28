@@ -112,7 +112,7 @@ function Projects() {
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.3 }}
 			>
 				<motion.div variants={itemVariants}>
 					<div className="relative mb-12">

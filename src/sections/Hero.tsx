@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import TextTransition, { presets } from 'react-text-transition';
+import { useEffect, useMemo, useState } from 'react';
+
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Hero() {
 	const { t, i18n } = useTranslation('', { keyPrefix: 'hero' });
@@ -68,9 +69,11 @@ function Hero() {
 				</p>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<button className="mt-11 h-16 w-60 rounded-lg border border-white text-2xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:scale-105  hover:shadow-white">
-					{t('button')}
-				</button>
+				<a href="#contactme">
+					<button className="mt-11 h-16 w-60 rounded-lg border border-white text-2xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:scale-105  hover:shadow-white">
+						{t('button')}
+					</button>
+				</a>
 			</motion.div>
 		</motion.div>
 	);

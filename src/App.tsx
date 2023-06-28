@@ -45,7 +45,8 @@ function App() {
 					<div ref={projectsRef} id="projects" className="py-32">
 						<Projects />
 					</div>
-					<div ref={contactmeRef} id="contactme" className="py-32">
+					<div></div>
+					<div ref={contactmeRef} id="contactme" className="pt-32">
 						<Contactme />
 					</div>
 					<Footer />

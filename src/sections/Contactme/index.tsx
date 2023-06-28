@@ -91,8 +91,7 @@ function Contactme() {
 							id="message"
 							cols={30}
 							rows={10}
-							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
-							style={{ resize: 'none' }}
+							className="w-full resize-none rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
 						></textarea>
 						<button
 							className="mt-11 w-full rounded-md bg-lightBlue py-4 text-xl font-bold text-white "

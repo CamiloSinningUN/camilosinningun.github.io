@@ -61,13 +61,9 @@ function RegularProject({
 				<div className="flex flex-wrap justify-end gap-2 ">
 					{technologies.map((technology) => (
 						<div
-							className="flex items-center justify-center rounded bg-opacity-5 px-3 py-1 font-bold text-white"
+							className="flex min-w-[92px] items-center justify-center rounded bg-opacity-5 px-3 py-1 font-bold text-white"
 							style={{
-								backgroundColor: hexToRgba(
-									secondaryColor,
-									0.44
-								),
-								minWidth: '92px'
+								backgroundColor: hexToRgba(secondaryColor, 0.44)
 							}}
 						>
 							{technology}

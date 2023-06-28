@@ -44,7 +44,7 @@ function Navbar() {
 	}, []);
 
 	return (
-		<div className="fixed z-10 w-full px-11 py-4">
+		<div className="fixed z-20 w-full px-11 py-4">
 			<motion.nav
 				className={`top-7 mx-11 flex items-center justify-between px-4 py-3 ${
 					showBackground &&

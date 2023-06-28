@@ -46,12 +46,12 @@ function Hero() {
 				<p className="text-xl text-softCyan">{t('greetings')}</p>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<h1 className="mt-8 text-6xl font-bold text-white">
+				<h1 className="mt-8 text-6xl font-bold tracking-tight text-white">
 					Camilo Sinning.
 				</h1>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<h2 className="mb-8 mt-2 flex text-6xl font-bold text-white opacity-50">
+				<h2 className="mb-8 mt-2 flex text-6xl font-bold tracking-tight text-white opacity-50">
 					{t('subtitle')}{' '}
 					<TextTransition
 						springConfig={presets.wobbly}

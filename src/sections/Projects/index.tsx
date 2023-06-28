@@ -65,7 +65,7 @@ function Projects() {
 						</h5>
 						<div className="absolute -bottom-2 h-5 w-full bg-softCyan bg-opacity-20" />
 					</div>
-					<h4 className="my-4 bg-gradient-to-br from-darkCyanLimeGreen to-brightCyanLimeGreen bg-clip-text text-6xl font-black text-transparent">
+					<h4 className="my-4 bg-gradient-to-br from-darkCyanLimeGreen to-brightCyanLimeGreen bg-clip-text text-6xl font-black tracking-tight text-transparent">
 						EYELAND
 					</h4>
 					<div className="w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
@@ -113,7 +113,7 @@ function Projects() {
 			>
 				<motion.div variants={itemVariants}>
 					<div className="relative mb-12">
-						<h3 className="relative text-center text-4xl font-bold text-softViolet">
+						<h3 className="relative text-center text-4xl font-bold tracking-tight text-softViolet">
 							Other projects
 						</h3>
 						<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />

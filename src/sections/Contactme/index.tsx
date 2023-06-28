@@ -49,7 +49,7 @@ function Contactme() {
 					</a>
 				</div>
 				<div className="relative mx-auto h-[734px] w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
-					<h2 className="absolute -left-7 -top-14 text-8xl font-black text-white">
+					<h2 className="absolute -left-7 -top-14 text-8xl font-black tracking-tighter text-white">
 						FORM
 					</h2>
 					<form

@@ -51,7 +51,7 @@ function RegularProject({
 						</a>
 					</div>
 					<h2
-						className="my-2 text-2xl font-bold"
+						className="my-2 text-2xl font-bold tracking-tight"
 						style={{ color: primaryColor }}
 					>
 						{name.toUpperCase()}

@@ -1,6 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { Variants, motion } from 'framer-motion';
+
 import { useState } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Languages = {
 	en: { name: 'English' },
@@ -17,7 +18,7 @@ function LanguageSwitch({ type }: Props) {
 	const [language, setLanguage] = useState(
 		i18n.language === 'en'
 			? Languages['en']
-			: Languages['es']
+			: i18n.language === 'es'
 			? Languages['es']
 			: Languages['it']
 	);

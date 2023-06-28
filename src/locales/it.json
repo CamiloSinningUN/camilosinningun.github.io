@@ -19,5 +19,47 @@
 		"skills": "Competenze",
 		"projects": "Progetti",
 		"contactme": "Contattami"
-	}
+	},
+	"aboutme": {
+		"paragraph_1": {
+			"line_1": "Sono Camilo José Sinning López, uno studente di ",
+			"line_2": "Ingegneria dei Sistemi",
+			"line_3": "all'",
+			"line_4": "Università del Nord",
+			"line_5": "a Barranquilla, Colombia. Ho una grande passione per la programmazione front-end, sia per le applicazioni",
+			"line_6": "mobili che web",
+			"line_7": ". Sono anche affascinato dal campo in costante evoluzione dell'Intelligenza Artificiale."
+		},
+		"paragraph_2": {
+			"line_1": "Attualmente, sto aspirando a ,",
+			"line_2": "una laurea magistrale in Scienze presso il Politecnico di Milano",
+			"line_3": ", concentrandomi sull'Intelligenza Artificiale."
+		},
+		"paragraph_3": {
+			"line_1": "Oltre ai miei studi universitari, ho ottenuto certificazioni in:",
+			"deeplearning": "Deep Learning",
+			"machinelearning": "Machine Learning",
+			"datamodeling": "Data Modeling"
+		}
+	},
+	"projects": {
+		"biggestproject": {
+			"title": "Progetto più grande",
+			"description": {
+				"line_1": "Programma educativo",
+				"line_2": "per studenti delle scuole superiori per la costruzione di applicazioni mobili per promuovere l'inclusione delle persone con disabilità visiva."
+			}
+		},
+		"otherprojects": {
+			"title": "Altri progetti",
+			"seemore": "Vedi di più..."
+		}
+	},
+	"contactme": {
+		"name": "Nome",
+		"email": "Email",
+		"message": "Messaggio",
+		"send": "Invia"
+	},
+	"footer": "Progettato e sviluppato da"
 }

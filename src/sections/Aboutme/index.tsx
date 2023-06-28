@@ -7,11 +7,14 @@ import Coursera from '@images/Coursera.png';
 import Udemy from '@images/Udemy.png';
 import Polimi from '@images/Polimi.png';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Aboutme() {
 	const [overshadowArray, setOvershadowArray] = useState(
 		institutions.map(() => false)
 	);
+
+	const { t } = useTranslation('', { keyPrefix: 'aboutme' });
 
 	const setSelected = (index: number) => {
 		if (index === -1) {
@@ -27,30 +30,25 @@ function Aboutme() {
 		<div className="flex justify-between overflow-hidden">
 			<div className="flex w-1/2 flex-col gap-8 text-base font-medium leading-loose text-white">
 				<p>
-					I'm Camilo José Sinning López, a{' '}
-					<Span>System engineering</Span> student at{' '}
-					<Span>Universidad del Norte</Span> in Barranquilla,
-					Colombia. I have a deep passion for front-end programming,
-					both for <Span>Mobile and web applications</Span>. I'm also
-					fascinated by the ever-evolving field of Artificial
-					Intelligence.
+					{t('paragraph_1.line_1')}
+					<Span>{t('paragraph_1.line_2')}</Span>
+					{t('paragraph_1.line_3')}
+					<Span>{t('paragraph_1.line_4')}</Span>
+					{t('paragraph_1.line_5')}
+					<Span>{t('paragraph_1.line_6')}</Span>
+					{t('paragraph_1.line_7')}
 				</p>
 				<p>
-					Currently, I am pursuing a{' '}
-					<Span>
-						Master of Science degree in Politecnico di Milano
-					</Span>
-					, focusing on Artificial Intelligence.{' '}
+					{t('paragraph_2.line_1')}
+					<Span>{t('paragraph_2.line_2')}</Span>
+					{t('paragraph_2.line_3')}
 				</p>
 				<div>
-					<p>
-						In addition to my studies, I have pursued certifications
-						in:{' '}
-					</p>
+					<p>{t('paragraph_3.line_1')}</p>
 					<ul className="ml-2 text-softCyan">
-						<Li>Deep learning</Li>
-						<Li>Machine learning</Li>
-						<Li>Data modeling</Li>
+						<Li>{t('paragraph_3.deeplearning')}</Li>
+						<Li>{t('paragraph_3.machinelearning')}</Li>
+						<Li>{t('paragraph_3.datamodeling')}</Li>
 					</ul>
 				</div>
 			</div>

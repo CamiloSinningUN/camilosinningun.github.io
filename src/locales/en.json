@@ -19,5 +19,47 @@
 		"skills": "Skills",
 		"projects": "Projects",
 		"contactme": "Contact me"
-	}
+	},
+	"aboutme": {
+		"paragraph_1": {
+			"line_1": "I'm Camilo José Sinning López, a",
+			"line_2": "Systems Engineering",
+			"line_3": "student at",
+			"line_4": "Universidad del Norte",
+			"line_5": "in Barranquilla, Colombia. I have a deep passion for front-end programming, both for",
+			"line_6": "Mobile and web applications",
+			"line_7": ". I'm also fascinated by the ever-evolving field of Artificial Intelligence."
+		},
+		"paragraph_2": {
+			"line_1": "Currently, I am pursuing a",
+			"line_2": "Master of Science degree in Politecnico di Milano",
+			"line_3": ", focusing on Artificial Intelligence."
+		},
+		"paragraph_3": {
+			"line_1": "In addition to my studies, I have pursued certifications in:",
+			"deeplearning": "Deep Learning",
+			"machinelearning": "Machine Learning",
+			"datamodeling": "Data Modeling"
+		}
+	},
+	"projects": {
+		"biggestproject": {
+			"title": "Biggest Project",
+			"description": {
+				"line_1": "Educational program",
+				"line_2": "or high school students for the construction of mobile applications to promote the inclusion of people with visual disabilities."
+			}
+		},
+		"otherprojects": {
+			"title": "Other Projects",
+			"seemore": "See more..."
+		}
+	},
+	"contactme": {
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"send": "Send"
+	},
+	"footer": "Designed and Developed by"
 }

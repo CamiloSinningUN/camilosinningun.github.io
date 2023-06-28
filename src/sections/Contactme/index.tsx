@@ -1,9 +1,12 @@
-import Social from '@shapes/Social.svg';
 import { BsLinkedin } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
+import Social from '@shapes/Social.svg';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Contactme() {
+	const { t } = useTranslation('', { keyPrefix: 'contactme' });
+
 	const containerVariants = {
 		hidden: {
 			y: -20,
@@ -60,7 +63,7 @@ function Contactme() {
 							className="mb-3 mt-6 text-xl font-bold text-white"
 							htmlFor="name"
 						>
-							Name
+							{t('name')}
 						</label>
 						<input
 							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
@@ -70,21 +73,21 @@ function Contactme() {
 						/>
 						<label
 							className="mb-3 mt-6 text-xl font-bold text-white"
-							htmlFor="subject"
+							htmlFor="email"
 						>
-							Subject
+							{t('email')}
 						</label>
 						<input
 							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
 							type="text"
-							name="subject"
-							id="subject"
+							name="email"
+							id="email"
 						/>
 						<label
 							className="mb-3 mt-6 text-xl font-bold text-white"
 							htmlFor="message"
 						>
-							Message
+							{t('message')}
 						</label>
 						<textarea
 							name="message"
@@ -97,7 +100,7 @@ function Contactme() {
 							className="mt-11 w-full rounded-md bg-lightBlue py-4 text-xl font-bold text-white "
 							type="submit"
 						>
-							Send
+							{t('send')}
 						</button>
 					</form>
 				</div>

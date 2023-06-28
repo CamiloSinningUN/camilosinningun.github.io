@@ -1,16 +1,19 @@
-import RegularProject from './RegularProject';
 import EYELAND from '@images/EYELAND.png';
-import { LuGithub } from 'react-icons/lu';
-import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
 import { GoProjectSymlink } from 'react-icons/go';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
+import { LuGithub } from 'react-icons/lu';
+import RegularProject from './RegularProject';
 import Span from '@components/Span';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
 	const [overshadowArray, setOvershadowArray] = useState(
 		projects.map(() => false)
 	);
+
+	const { t } = useTranslation('', { keyPrefix: 'projects' });
 
 	const setSelected = (index: number) => {
 		if (index === -1) {
@@ -61,7 +64,7 @@ function Projects() {
 				<div className="flex w-full flex-col items-end">
 					<div className="relative">
 						<h5 className="relative text-xl font-normal text-softCyan">
-							Biggest Project
+							{t('biggestproject.title')}
 						</h5>
 						<div className="absolute -bottom-2 h-5 w-full bg-softCyan bg-opacity-20" />
 					</div>
@@ -70,12 +73,12 @@ function Projects() {
 					</h4>
 					<div className="w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
 						<p className="text-base font-medium leading-snug">
-							<Span>Educational program</Span> for high school
-							students for the construction of mobile applications
-							to promote the inclusion of people with visual
-							disabilities.
+							<Span>
+								{t('biggestproject.description.line_1')}
+							</Span>{' '}
+							{t('biggestproject.description.line_2')}
 						</p>
-						<div className="mt-5 text-sm font-black opacity-30">
+						<div className="mt-5 text-sm font-extrabold tracking-wide opacity-30">
 							Typescript - React native - Expo - React - Vite
 						</div>
 					</div>
@@ -114,7 +117,7 @@ function Projects() {
 				<motion.div variants={itemVariants}>
 					<div className="relative mb-12">
 						<h3 className="relative text-center text-4xl font-bold tracking-tight text-softViolet">
-							Other projects
+							{t('otherprojects.title')}
 						</h3>
 						<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />
 					</div>
@@ -153,7 +156,7 @@ function Projects() {
 								)
 							}
 						>
-							See more...
+							{t('otherprojects.seemore')}
 						</a>
 						<div className="relative -left-full border-t-2 border-white transition-transform delay-75 duration-200 ease-in-out group-hover:translate-x-full" />
 					</div>

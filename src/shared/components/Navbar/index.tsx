@@ -1,8 +1,9 @@
-import Logo from '@images/Logo.png';
-import Item from './Item';
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+
+import Item from './Item';
+import Logo from '@images/Logo.png';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
 	const [showBackground, setShowBackground] = useState(false);
@@ -74,12 +75,17 @@ function Navbar() {
 					</ul>
 
 					<motion.div variants={itemVariants}>
-						<button className="group relative flex items-center justify-center overflow-hidden rounded-full border border-white px-7 py-2 transition duration-150 hover:opacity-100">
+						<a
+							href="/files/CV_Camilo_Sinning.pdf"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white px-7 py-2 transition duration-150 hover:opacity-100"
+						>
 							<div className="absolute inset-0 -translate-x-96 bg-white transition duration-300 ease-in-out group-hover:translate-x-0" />
-							<a className="z-10 text-white transition delay-100 duration-200 group-hover:text-black">
+							<p className="z-10 text-white transition delay-100 duration-200 group-hover:text-black">
 								{t('resume')}
-							</a>
-						</button>
+							</p>
+						</a>
 					</motion.div>
 				</div>
 			</motion.nav>

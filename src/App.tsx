@@ -1,18 +1,30 @@
+import { useEffect, useState } from 'react';
+
 import Aboutme from '@sections/Aboutme';
 import AnimatedCursor from 'react-animated-cursor';
 import Contactme from '@sections/Contactme';
 import Footer from '@components/Footer';
 import Hero from '@sections/Hero';
 import LanguageSwitch from '@components/LanguageSwitch';
+import Loading from '@components/Loading';
 import Navbar from '@components/Navbar';
 import Projects from '@sections/Projects';
-import Skills from '@sections/Skills';
 import Title from '@components/Title';
 import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
-	const { aboutmeRef, skillsRef, projectsRef, contactmeRef } =
-		useObserverSections();
+	const { aboutmeRef, projectsRef, contactmeRef } = useObserverSections();
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 2100);
+	}, []);
+
+	if (isLoading) {
+		return <Loading />;
+	}
 
 	return (
 		<div className="relative overflow-x-clip">
@@ -45,7 +57,6 @@ function App() {
 					>
 						<Aboutme />
 					</div>
-					{/* <div ref={skillsRef}><Skills /></div> */}
 					<div
 						ref={projectsRef}
 						id="projects"

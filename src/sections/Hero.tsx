@@ -38,7 +38,7 @@ function Hero() {
 
 	return (
 		<motion.div
-			className="flex h-auto min-h-screen flex-col px-4 pt-28 text-center sm:justify-center lg:text-start"
+			className="flex h-auto min-h-screen flex-col pt-28 text-center sm:justify-center lg:text-start"
 			variants={containerVariants}
 			initial={'hidden'}
 			animate={'visible'}

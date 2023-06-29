@@ -28,8 +28,8 @@ function Aboutme() {
 	};
 
 	return (
-		<div className="flex justify-between overflow-hidden">
-			<div className="flex w-1/2 flex-col gap-8 text-base font-medium leading-loose text-white">
+		<div className="flex flex-col-reverse gap-20 overflow-hidden lg:flex-row lg:gap-0">
+			<div className="flex w-full flex-col gap-8 text-base font-medium leading-loose text-white lg:w-1/2">
 				<p>
 					{t('paragraph_1.line_1')}
 					<Span>{t('paragraph_1.line_2')}</Span>
@@ -53,7 +53,7 @@ function Aboutme() {
 					</ul>
 				</div>
 			</div>
-			<div className="relative w-1/2">
+			<div className="relative aspect-square w-full lg:w-1/2">
 				<div className="absolute right-0 z-10 grid grid-cols-3 grid-rows-3 gap-3">
 					{institutions.map((institution, index) => {
 						return (

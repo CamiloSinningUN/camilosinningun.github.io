@@ -32,13 +32,17 @@ function App() {
 			<Navbar />
 			<Title />
 			<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
-				<div className="mx-auto max-w-screen-lg justify-start">
+				<div className="mx-auto max-w-screen-lg justify-start px-4">
 					<Hero />
 				</div>
 			</div>
-			<div className="absolute top-[100vh] w-full bg-veryDarkGray">
+			<div className="absolute top-[100vh] w-full bg-veryDarkGray px-4">
 				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col">
-					<div ref={aboutmeRef} id="aboutme" className="py-32">
+					<div
+						ref={aboutmeRef}
+						id="aboutme"
+						className="py-5 lg:py-32"
+					>
 						<Aboutme />
 					</div>
 					{/* <div ref={skillsRef}><Skills /></div> */}

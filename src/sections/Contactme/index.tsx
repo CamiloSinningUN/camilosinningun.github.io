@@ -29,35 +29,38 @@ function Contactme() {
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.5 }}
 		>
-			<div className="relative mx-auto w-fit">
-				<div
-					className="absolute -right-20 top-10 flex h-[145px] w-[83.5px] flex-col items-center justify-start gap-2 pl-5 pt-4"
-					style={{ backgroundImage: `url(${Social})` }}
-				>
-					<a
-						href="https://www.linkedin.com/in/camilo-sinning-49613a241/"
-						target="_blank"
+			<div className="mx-auto flex w-full flex-row justify-center">
+				<div className="relative mx-auto h-[734px] w-full max-w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
+					<div
+						className="absolute -right-[4.6rem] top-10 hidden h-[136px] w-[74px] flex-col items-center justify-start gap-2 pl-3 pt-4 lg:flex"
+						style={{ backgroundImage: `url(${Social})` }}
 					>
-						<BsLinkedin
-							size={35}
-							className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
-						/>
-					</a>
-					<div className="mt-1 h-0.5 w-1/2 bg-black opacity-20" />
-					<a href="mailto:camilosinning.cs@gmail.com" target="_blank">
-						<MdEmail
-							size={40}
-							className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
-						/>
-					</a>
-				</div>
-				<div className="relative mx-auto h-[734px] w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
-					<h2 className="absolute -left-7 -top-14 text-8xl font-black tracking-tighter text-white">
+						<a
+							href="https://www.linkedin.com/in/camilo-sinning-49613a241/"
+							target="_blank"
+						>
+							<BsLinkedin
+								size={35}
+								className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
+							/>
+						</a>
+						<div className="mt-1 h-0.5 w-1/2 bg-black opacity-20" />
+						<a
+							href="mailto:camilosinning.cs@gmail.com"
+							target="_blank"
+						>
+							<MdEmail
+								size={40}
+								className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
+							/>
+						</a>
+					</div>
+					<h2 className="absolute -top-8 w-full text-center text-7xl font-black tracking-tighter text-white lg:-left-7 lg:-top-14 lg:w-auto lg:text-8xl">
 						FORM
 					</h2>
 					<form
 						action="post"
-						className="flex h-full flex-col items-start justify-center px-8 py-14"
+						className="flex h-full w-full flex-col items-start justify-center px-8 py-14"
 					>
 						<label
 							className="mb-3 mt-6 text-xl font-bold text-white"

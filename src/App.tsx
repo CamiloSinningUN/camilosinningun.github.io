@@ -41,16 +41,24 @@ function App() {
 					<div
 						ref={aboutmeRef}
 						id="aboutme"
-						className="py-5 lg:py-32"
+						className="py-16 lg:py-32"
 					>
 						<Aboutme />
 					</div>
 					{/* <div ref={skillsRef}><Skills /></div> */}
-					<div ref={projectsRef} id="projects" className="py-32">
+					<div
+						ref={projectsRef}
+						id="projects"
+						className="py-16 lg:py-32"
+					>
 						<Projects />
 					</div>
 					<div></div>
-					<div ref={contactmeRef} id="contactme" className="pt-32">
+					<div
+						ref={contactmeRef}
+						id="contactme"
+						className="py-16 lg:py-32"
+					>
 						<Contactme />
 					</div>
 					<Footer />

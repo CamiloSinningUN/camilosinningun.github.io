@@ -15,7 +15,7 @@ function Hero() {
 		visible: {
 			transition: {
 				delayChildren: 1.5,
-				staggerChildren: 0.3
+				staggerChildren: 0.1
 			}
 		}
 	};

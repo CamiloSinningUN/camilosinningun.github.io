@@ -27,7 +27,7 @@ function Contactme() {
 			variants={containerVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true, amount: 0.5 }}
+			viewport={{ once: true, amount: 0.3 }}
 		>
 			<div className="mx-auto flex w-full flex-row justify-center">
 				<div className="relative mx-auto h-[734px] w-full max-w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">

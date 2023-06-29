@@ -53,14 +53,14 @@ function App() {
 					<div
 						ref={aboutmeRef}
 						id="aboutme"
-						className="py-16 lg:py-32"
+						className="py-16 lg:py-24"
 					>
 						<Aboutme />
 					</div>
 					<div
 						ref={projectsRef}
 						id="projects"
-						className="py-16 lg:py-32"
+						className="py-16 lg:py-24"
 					>
 						<Projects />
 					</div>
@@ -68,7 +68,7 @@ function App() {
 					<div
 						ref={contactmeRef}
 						id="contactme"
-						className="py-16 lg:py-32"
+						className="py-16 lg:py-24"
 					>
 						<Contactme />
 					</div>

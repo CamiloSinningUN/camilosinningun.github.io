@@ -30,7 +30,7 @@ function Projects() {
 		visible: {
 			transition: {
 				delayChildren: 0.2,
-				staggerChildren: 0.2
+				staggerChildren: 0.1
 			}
 		}
 	};
@@ -50,7 +50,7 @@ function Projects() {
 				variants={itemVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.3 }}
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
 				<div className="left-0 mb-5 max-h-[362px] w-full max-w-[680px] overflow-hidden rounded-lg lg:absolute">

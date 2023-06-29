@@ -7,6 +7,7 @@ import React from 'react';
 import Span from '@components/Span';
 import Udemy from '@images/Udemy.png';
 import Uninorte from '@images/Uninorte.png';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -27,8 +28,23 @@ function Aboutme() {
 		setOvershadowArray(overshadowArrayCopy);
 	};
 
+	const itemVariants = {
+		hidden: { y: -20, opacity: 0 },
+		visible: {
+			y: 0,
+			opacity: 1
+		}
+	};
+
 	return (
-		<div className="flex flex-col-reverse gap-20 overflow-hidden lg:flex-row lg:gap-0">
+		<motion.div
+			className="flex flex-col-reverse gap-20 overflow-hidden lg:flex-row lg:gap-0"
+			variants={itemVariants}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, amount: 0.3 }}
+			transition={{ duration: 0.5, delay: 0.2 }}
+		>
 			<div className="flex w-full flex-col gap-8 text-base font-medium leading-loose text-white lg:w-1/2">
 				<p>
 					{t('paragraph_1.line_1')}
@@ -81,7 +97,7 @@ function Aboutme() {
 					<img className="scale-150" src={Grid} alt="" />
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

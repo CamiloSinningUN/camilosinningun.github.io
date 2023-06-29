@@ -46,23 +46,23 @@ function Projects() {
 	return (
 		<div className="text-white">
 			<motion.div
-				className="relative flex items-center"
+				className="relative flex flex-col items-center"
 				variants={itemVariants}
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
-				<div className="absolute h-[362px] w-[680px] overflow-hidden rounded-lg">
-					<div className="absolute h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0" />
+				<div className="left-0 mb-5 max-h-[362px] w-full max-w-[680px] overflow-hidden rounded-lg lg:absolute">
+					<div className="absolute hidden h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0 lg:block" />
 					<img
-						className="h-[362px] w-[680px]  object-fill"
+						className="max-h-[362px] w-full max-w-[680px] object-fill"
 						src={EYELAND}
 						alt=""
 					/>
 				</div>
-				<div className="flex w-full flex-col items-end">
-					<div className="relative">
+				<div className="-order-1 flex flex-col items-end self-end">
+					<div className="relative left-0">
 						<h5 className="relative text-xl font-normal text-softCyan">
 							{t('biggestproject.title')}
 						</h5>
@@ -71,7 +71,9 @@ function Projects() {
 					<h4 className="my-4 bg-gradient-to-br from-darkCyanLimeGreen to-brightCyanLimeGreen bg-clip-text text-6xl font-black tracking-tight text-transparent">
 						EYELAND
 					</h4>
-					<div className="w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
+				</div>
+				<div className="flex w-full flex-col items-end">
+					<div className="w-full max-w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
 						<p className="text-base font-medium leading-snug">
 							<Span>
 								{t('biggestproject.description.line_1')}
@@ -108,7 +110,7 @@ function Projects() {
 				</div>
 			</motion.div>
 			<motion.div
-				className="mt-40 flex flex-col items-center"
+				className="mt-20 flex flex-col items-center lg:mt-40"
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -116,13 +118,13 @@ function Projects() {
 			>
 				<motion.div variants={itemVariants}>
 					<div className="relative mb-12">
-						<h3 className="relative text-center text-4xl font-bold tracking-tight text-softViolet">
+						<h3 className="relative text-center text-3xl font-bold tracking-tight text-softViolet lg:text-4xl">
 							{t('otherprojects.title')}
 						</h3>
 						<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />
 					</div>
 				</motion.div>
-				<div className="flex flex-wrap gap-6">
+				<div className="flex flex-col flex-wrap justify-center gap-6 lg:flex-row">
 					{projects.map((project, index) => (
 						<RegularProject
 							key={project.name}

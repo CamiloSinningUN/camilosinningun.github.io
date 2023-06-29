@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import useSectionContext from './useSectionContext';
 import { useInView } from 'react-intersection-observer';
+import useSectionContext from './useSectionContext';
 
 const useObserverSections = () => {
 	const [aboutmeRef, aboutmeInView] = useInView({
@@ -39,6 +39,7 @@ const useObserverSections = () => {
 	}, [aboutmeInView, setSection]);
 
 	useEffect(() => {
+		console.log(skillsInView);
 		if (skillsInView) {
 			setSection({
 				name: 'skills',

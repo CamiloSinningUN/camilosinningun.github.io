@@ -3,25 +3,66 @@ import { motion } from 'framer-motion';
 
 function Loading() {
 	const logoVariants = {
-		initial: { opacity: 0, scale: 0.5, rotate: 0 },
+		initial: { opacity: 0, scale: 0.5 },
 		animate: {
 			opacity: 1,
 			scale: 1,
-			rotate: 360,
-			transition: { duration: 2, loop: Infinity, ease: 'linear' }
+			transition: {
+				duration: 2
+			}
+		}
+	};
+
+	const barLeftVariants = {
+		initial: { x: '-100%' },
+		animate: {
+			x: 0,
+			transition: {
+				duration: 2,
+				ease: 'easeInOut'
+			}
+		}
+	};
+
+	const barRightVariants = {
+		initial: { x: '100%' },
+		animate: {
+			x: 0,
+			transition: {
+				duration: 2,
+				ease: 'easeInOut'
+			}
 		}
 	};
 
 	return (
-		<div className="flex h-screen w-screen items-center justify-center bg-lightBlue">
+		<div className="flex h-screen w-screen items-center justify-center overflow-hidden bg-lightBlue">
+			<motion.div
+				className="flex w-full items-center"
+				variants={barLeftVariants}
+				initial="initial"
+				animate="animate"
+			>
+				<div className="h-0.5 w-full bg-white" />
+				<div className="h-3 w-3 rotate-45 border-b-2 border-l-2 border-white" />
+			</motion.div>
 			<motion.img
-				className="h-10 w-10 border-white"
+				className="h-16 w-16  border-white"
 				src={Logo}
 				alt=""
 				variants={logoVariants}
 				initial="initial"
 				animate="animate"
 			/>
+			<motion.div
+				className="flex w-full items-center"
+				variants={barRightVariants}
+				initial="initial"
+				animate="animate"
+			>
+				<div className="h-3 w-3 rotate-45 border-r-2 border-t-2 border-white" />
+				<div className="h-0.5 w-full bg-white" />
+			</motion.div>
 		</div>
 	);
 }

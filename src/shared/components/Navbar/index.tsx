@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
 import { AiOutlineClose } from 'react-icons/ai';
+import { BsLinkedin } from 'react-icons/bs';
 import Item from './Item';
 import Logo from '@images/Logo.png';
+import { MdEmail } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { motion } from 'framer-motion';
 import useLanguage from '@hooks/useLanguage';
@@ -114,6 +116,26 @@ function Navbar() {
 					</motion.div>
 
 					<div className="mt-auto flex w-full flex-col px-5 lg:hidden">
+						<div className="mx-auto mb-3 flex w-fit items-center justify-center gap-5 rounded-lg bg-white bg-opacity-20 px-5 py-2">
+							<a
+								href="https://www.linkedin.com/in/camilo-sinning-49613a241/"
+								target="_blank"
+							>
+								<BsLinkedin
+									size={30}
+									className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
+								/>
+							</a>
+							<a
+								href="mailto:camilosinning.cs@gmail.com"
+								target="_blank"
+							>
+								<MdEmail
+									size={40}
+									className="cursor-pointer opacity-80 transition delay-75 duration-200 ease-in-out hover:opacity-100"
+								/>
+							</a>
+						</div>
 						<div className="h-0.5 w-full bg-white bg-opacity-50" />
 						<button
 							className="py-4 font-normal"

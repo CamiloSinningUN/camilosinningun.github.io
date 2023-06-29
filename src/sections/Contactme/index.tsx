@@ -69,7 +69,7 @@ function Contactme() {
 							{t('name')}
 						</label>
 						<input
-							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
+							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
 							type="text"
 							name="name"
 							id="name"
@@ -81,7 +81,7 @@ function Contactme() {
 							{t('email')}
 						</label>
 						<input
-							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
+							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
 							type="text"
 							name="email"
 							id="email"
@@ -97,10 +97,10 @@ function Contactme() {
 							id="message"
 							cols={30}
 							rows={10}
-							className="w-full resize-none rounded-md border border-veryDarkGray bg-darkGray px-3 py-3"
+							className="w-full resize-none rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
 						></textarea>
 						<button
-							className="mt-11 w-full rounded-md bg-lightBlue py-4 text-xl font-bold text-white "
+							className="mt-11 w-full rounded-md bg-indigo-500 py-4 text-xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:bg-indigo-600 focus:bg-indigo-600 focus:outline-none active:bg-blue-700"
 							type="submit"
 						>
 							{t('send')}

@@ -18,7 +18,7 @@ function Title() {
 				initial={{ opacity: 0, y: 100, rotate: isMobile ? 0 : -90 }}
 				animate={{ opacity: 1, y: 0 }}
 				exit={{ opacity: 0 }}
-				className={`fixed top-8 z-50 w-full origin-bottom-left text-center text-2xl font-bold lg:bottom-10 lg:left-36 lg:top-auto lg:w-auto lg:text-7xl text-${section.color}`}
+				className={`fixed top-8 z-50 w-full origin-bottom-left text-center text-2xl font-bold lg:bottom-10 lg:left-[6.5rem] lg:top-auto lg:w-auto lg:text-5xl text-${section.color}`}
 			>
 				{t(section.name)}
 			</motion.div>

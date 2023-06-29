@@ -50,7 +50,7 @@ function Navbar() {
 	}, []);
 
 	return (
-		<div className="fixed z-20 w-screen px-3 py-4 lg:px-11">
+		<div className="fixed z-20 w-screen px-3 py-4">
 			<motion.nav
 				className={`top-7 flex items-center justify-between px-4 py-3 lg:mx-11 ${
 					showBackground &&
@@ -125,7 +125,7 @@ function Navbar() {
 				</div>
 			</motion.nav>
 			{showBackground && (
-				<div className="mx-auto hidden h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20 lg:static" />
+				<div className="mx-auto hidden h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20 lg:block" />
 			)}
 		</div>
 	);

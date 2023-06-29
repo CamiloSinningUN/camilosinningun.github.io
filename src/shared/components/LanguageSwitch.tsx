@@ -22,8 +22,8 @@ function LanguageSwitch({ type }: Props) {
 		<motion.div
 			className={`fixed z-10 hidden items-center lg:flex ${
 				type === 'top'
-					? '-left-[8px] top-[180px] rotate-90'
-					: 'bottom-[118px] right-0 -rotate-90'
+					? 'left-[6.25rem] top-16 origin-top-left rotate-90'
+					: 'bottom-56 right-[6.25rem] origin-top-right -rotate-90'
 			}`}
 			variants={containerVariants}
 			initial="hidden"

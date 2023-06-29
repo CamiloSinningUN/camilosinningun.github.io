@@ -1,7 +1,8 @@
-import { AiOutlineFolder } from 'react-icons/ai';
-import hexToRgba from '@utils/hexToRgba';
-import { FiArrowUpRight } from 'react-icons/fi';
 import { Variants, motion } from 'framer-motion';
+
+import { AiOutlineFolder } from 'react-icons/ai';
+import { FiArrowUpRight } from 'react-icons/fi';
+import hexToRgba from '@utils/hexToRgba';
 
 interface Props {
 	name: string;
@@ -59,8 +60,9 @@ function RegularProject({
 					<p className="text-sm opacity-50">{description}</p>
 				</div>
 				<div className="flex flex-wrap justify-end gap-2 ">
-					{technologies.map((technology) => (
+					{technologies.map((technology, index) => (
 						<div
+							key={index}
 							className="flex min-w-[92px] items-center justify-center rounded bg-opacity-5 px-3 py-1 font-bold text-white"
 							style={{
 								backgroundColor: hexToRgba(secondaryColor, 0.44)

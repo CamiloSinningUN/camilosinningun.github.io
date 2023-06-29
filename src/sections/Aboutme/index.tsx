@@ -1,11 +1,12 @@
-import Span from '@components/Span';
-import Li from '@components/Li';
+import Coursera from '@images/Coursera.png';
 import Grid from '@shapes/grid.svg';
 import Institution from './Institution';
-import Uninorte from '@images/Uninorte.png';
-import Coursera from '@images/Coursera.png';
-import Udemy from '@images/Udemy.png';
+import Li from '@components/Li';
 import Polimi from '@images/Polimi.png';
+import React from 'react';
+import Span from '@components/Span';
+import Udemy from '@images/Udemy.png';
+import Uninorte from '@images/Uninorte.png';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -56,20 +57,23 @@ function Aboutme() {
 				<div className="absolute right-0 z-10 grid grid-cols-3 grid-rows-3 gap-3">
 					{institutions.map((institution, index) => {
 						return (
-							<>
+							<React.Fragment key={index}>
 								{Array(institution.skip)
 									.fill(0)
-									.map(() => {
-										return <div />;
+									.map((_, i) => {
+										return (
+											<div key={`skip-${index}-${i}`} />
+										);
 									})}
 								<Institution
+									key={`institution-${index}`}
 									image={institution.image}
 									link={institution.link}
 									setSelected={setSelected}
 									overshadow={overshadowArray[index]}
 									index={index}
 								/>
-							</>
+							</React.Fragment>
 						);
 					})}
 				</div>

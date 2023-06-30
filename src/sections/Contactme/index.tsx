@@ -8,7 +8,6 @@ import { MdEmail } from 'react-icons/md';
 import { Message } from '@interfaces/Message.interface';
 import Social from '@shapes/Social.svg';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import useSendMessage from '@hooks/useSendMessage';
 import { useTranslation } from 'react-i18next';

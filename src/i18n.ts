@@ -19,9 +19,9 @@ const resources = {
 
 i18next.on('languageChanged', (lng) => {
 	document.documentElement.lang = lng;
-	const newPathname = `/${lng}`;
-	if (window.location.pathname !== newPathname) {
-		window.location.pathname = newPathname;
+	const newPathname = `#${lng}`;
+	if (window.location.hash !== newPathname) {
+		window.location.hash = newPathname;
 	}
 });
 

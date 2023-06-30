@@ -39,7 +39,6 @@ const useObserverSections = () => {
 	}, [aboutmeInView, setSection]);
 
 	useEffect(() => {
-		console.log(skillsInView);
 		if (skillsInView) {
 			setSection({
 				name: 'skills',

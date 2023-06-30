@@ -59,7 +59,17 @@
 		"name": "Nombre",
 		"email": "Correo electrónico",
 		"message": "Mensaje",
-		"send": "Enviar"
+		"send": "Enviar",
+		"sending": "Enviando...",
+		"toast": {
+			"success": "¡Mensaje enviado con éxito!",
+			"error": "Se produjo un error al enviar el mensaje. Por favor, inténtelo de nuevo más tarde."
+		},
+		"errors": {
+			"name": "Por favor, introduzca su nombre.",
+			"email": "Por favor, introduzca una dirección de correo electrónico válida.",
+			"message": "Por favor, introduzca un mensaje."
+		}
 	},
 	"footer": "Diseñado y desarrollado por"
 }

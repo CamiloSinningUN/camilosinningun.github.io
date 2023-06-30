@@ -59,7 +59,17 @@
 		"name": "Nome",
 		"email": "Email",
 		"message": "Messaggio",
-		"send": "Invia"
+		"send": "Invia",
+		"sending": "Invio in corso...",
+		"toast": {
+			"success": "Messaggio inviato con successo!",
+			"error": "Si è verificato un errore durante l'invio del messaggio. Riprova più tardi."
+		},
+		"errors": {
+			"name": "Inserisci il tuo nome.",
+			"email": "Inserisci un indirizzo email valido.",
+			"message": "Inserisci un messaggio."
+		}
 	},
 	"footer": "Progettato e sviluppato da"
 }

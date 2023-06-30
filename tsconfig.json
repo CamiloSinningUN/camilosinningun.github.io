@@ -34,7 +34,8 @@
 			"@sections/*": ["src/sections/*"],
 			"@components/*": ["src/shared/components/*"],
 			"@contexts/*": ["src/core/contexts/*"],
-			"@shapes/*": ["src/assets/shapes/*"]
+			"@shapes/*": ["src/assets/shapes/*"],
+			"@interfaces/*": ["src/shared/interfaces/*"]
 		}
 	},
 	"include": ["src"],

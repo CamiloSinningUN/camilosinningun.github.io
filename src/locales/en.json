@@ -59,7 +59,17 @@
 		"name": "Name",
 		"email": "Email",
 		"message": "Message",
-		"send": "Send"
+		"send": "Send",
+		"sending": "Sending...",
+		"toast": {
+			"success": "Message sent successfully!",
+			"error": "An error occurred while sending the message. Please try again later."
+		},
+		"errors": {
+			"name": "Please enter your name.",
+			"email": "Please enter a valid email address.",
+			"message": "Please enter a message."
+		}
 	},
 	"footer": "Designed and Developed by"
 }

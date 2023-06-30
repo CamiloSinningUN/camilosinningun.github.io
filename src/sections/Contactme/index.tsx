@@ -1,11 +1,43 @@
+import 'react-toastify/dist/ReactToastify.css';
+
+import { ToastContainer, toast } from 'react-toastify';
+
 import { BsLinkedin } from 'react-icons/bs';
+import Input from '@components/Input';
 import { MdEmail } from 'react-icons/md';
+import { Message } from '@interfaces/Message.interface';
 import Social from '@shapes/Social.svg';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import useSendMessage from '@hooks/useSendMessage';
 import { useTranslation } from 'react-i18next';
 
 function Contactme() {
 	const { t } = useTranslation('', { keyPrefix: 'contactme' });
+	const {
+		control,
+		handleSubmit,
+		reset,
+		formState: { errors }
+	} = useForm({
+		defaultValues: {
+			name: '',
+			email: '',
+			message: ''
+		}
+	});
+	const { sendMessage, loading, error } = useSendMessage();
+
+	const onSubmit = async (data: Message) => {
+		await sendMessage(data);
+		if (error) {
+			toast.error(t('toast.error'), { theme: 'colored' });
+		} else {
+			toast.success(t('toast.success'), { theme: 'colored' });
+			reset();
+		}
+	};
 
 	const containerVariants = {
 		hidden: {
@@ -29,6 +61,7 @@ function Contactme() {
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.3 }}
 		>
+			<ToastContainer />
 			<div className="mx-auto flex w-full flex-row justify-center">
 				<div className="relative mx-auto h-[734px] w-full max-w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
 					<div
@@ -58,54 +91,32 @@ function Contactme() {
 					<h2 className="absolute -top-8 w-full text-center text-7xl font-black tracking-tighter text-white lg:-left-7 lg:-top-14 lg:w-auto lg:text-8xl">
 						FORM
 					</h2>
-					<form
-						action="post"
-						className="flex h-full w-full flex-col items-start justify-center px-8 py-14"
-					>
-						<label
-							className="mb-3 mt-6 text-xl font-bold text-white"
-							htmlFor="name"
-						>
-							{t('name')}
-						</label>
-						<input
-							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
-							type="text"
+					<div className="flex h-full w-full flex-col items-start justify-center px-8 py-14">
+						<Input
+							label={t('name')}
 							name="name"
-							id="name"
+							control={control}
+							error={errors.name && t('errors.name')}
 						/>
-						<label
-							className="mb-3 mt-6 text-xl font-bold text-white"
-							htmlFor="email"
-						>
-							{t('email')}
-						</label>
-						<input
-							className="w-full rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
-							type="text"
+						<Input
+							label={t('email')}
 							name="email"
-							id="email"
+							control={control}
+							error={errors.email && t('errors.email')}
 						/>
-						<label
-							className="mb-3 mt-6 text-xl font-bold text-white"
-							htmlFor="message"
-						>
-							{t('message')}
-						</label>
-						<textarea
+						<Input
+							label={t('message')}
 							name="message"
-							id="message"
-							cols={30}
-							rows={10}
-							className="w-full resize-none rounded-md border border-veryDarkGray bg-darkGray px-3 py-3 text-white focus:outline-none"
-						></textarea>
+							control={control}
+							error={errors.message && t('errors.message')}
+						/>
 						<button
-							className="mt-11 w-full rounded-md bg-indigo-500 py-4 text-xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:bg-indigo-600 focus:bg-indigo-600 focus:outline-none active:bg-blue-700"
-							type="submit"
+							className="mt-2 w-full rounded-md bg-indigo-500 py-4 text-xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:bg-indigo-600 focus:bg-indigo-600 focus:outline-none active:bg-blue-700"
+							onClick={() => !loading && handleSubmit(onSubmit)()}
 						>
-							{t('send')}
+							{!loading ? t('send') : t('sending')}
 						</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		</motion.div>

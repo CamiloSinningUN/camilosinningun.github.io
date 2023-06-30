@@ -44,7 +44,7 @@ function App() {
 			<Navbar />
 			<Title />
 			<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
-				<div className="mx-auto justify-start px-4 lg:max-w-screen-lg">
+				<div className="mx-auto justify-start px-4 pt-28 lg:max-w-screen-lg lg:pt-0">
 					<Hero />
 				</div>
 			</div>

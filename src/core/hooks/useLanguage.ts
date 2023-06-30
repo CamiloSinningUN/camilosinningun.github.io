@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Languages = {
@@ -9,12 +9,10 @@ const Languages = {
 
 const useLanguage = () => {
 	const { i18n } = useTranslation();
-	const [language, setLanguage] = useState(
-		i18n.language === 'en'
-			? Languages['en']
-			: i18n.language === 'es'
-			? Languages['es']
-			: Languages['it']
+
+	const language = useMemo(
+		() => Languages[i18n.language as keyof typeof Languages],
+		[i18n.language]
 	);
 
 	const changeLanguage = () => {
@@ -25,7 +23,6 @@ const useLanguage = () => {
 				? 'it'
 				: 'en';
 		i18n.changeLanguage(newLanguage);
-		setLanguage(Languages[newLanguage]);
 	};
 
 	return { language, changeLanguage };

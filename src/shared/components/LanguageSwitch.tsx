@@ -1,6 +1,8 @@
 import { Variants, motion } from 'framer-motion';
 
 import useLanguage from '@hooks/useLanguage';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
 	type: 'top' | 'bottom';

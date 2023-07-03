@@ -30,7 +30,10 @@ function RegularProject({
 	variants
 }: Props) {
 	return (
-		<motion.div variants={variants}>
+		<motion.div
+			variants={variants}
+			onClick={() => window.open(link, '_blank')}
+		>
 			<div
 				className={`group flex h-72 w-80 cursor-pointer flex-col justify-between rounded-lg border border-gray bg-darkerGray p-5 transition delay-75 duration-300 ease-in-out hover:-translate-y-2 ${
 					overshadow && 'opacity-50'
@@ -41,15 +44,12 @@ function RegularProject({
 				<div>
 					<div className="-ml-1 flex items-start justify-between">
 						<AiOutlineFolder color={`${primaryColor}`} size={60} />
-						<a
-							href={link}
-							className="transition delay-75 duration-150 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1"
-						>
+						<div className="transition delay-75 duration-150 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1">
 							<FiArrowUpRight
 								color={`${primaryColor}`}
 								size={30}
 							/>
-						</a>
+						</div>
 					</div>
 					<h2
 						className="my-2 text-2xl font-bold tracking-tight"

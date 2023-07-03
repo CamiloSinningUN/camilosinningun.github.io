@@ -1,4 +1,5 @@
 import EYELAND from '@images/EYELAND.png';
+import { FiArrowUpRight } from 'react-icons/fi';
 import { GoProjectSymlink } from 'react-icons/go';
 import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
 import { LuGithub } from 'react-icons/lu';
@@ -143,10 +144,8 @@ function Projects() {
 				</div>
 				<motion.div variants={itemVariants}>
 					<div className="group relative mt-10 overflow-hidden transition delay-75 duration-200 ease-in-out hover:scale-105">
-						<a
-							href="https://github.com/CamiloSinningUN?tab=repositories"
-							target="_blank"
-							className=" cursor-pointer font-bold"
+						<div
+							className="flex cursor-pointer items-center font-bold"
 							onMouseEnter={() =>
 								setOvershadowArray(
 									overshadowArray.map(() => true)
@@ -158,8 +157,14 @@ function Projects() {
 								)
 							}
 						>
-							{t('otherprojects.seemore')}
-						</a>
+							<a
+								href="https://github.com/CamiloSinningUN?tab=repositories"
+								target="_blank"
+							>
+								{t('otherprojects.seemore')}
+							</a>
+							{/* <FiArrowUpRight className="ml-2" /> */}
+						</div>
 						<div className="relative -left-full border-t-2 border-white transition-transform delay-75 duration-200 ease-in-out group-hover:translate-x-full" />
 					</div>
 				</motion.div>
@@ -177,6 +182,24 @@ const projects: {
 	secondaryColor: string;
 }[] = [
 	{
+		name: 'SIMET',
+		description:
+			'A web page that strengthens mutual aid in industrial emergencies through a network of companies.',
+		technologies: ['Angular', 'Goople Maps API'],
+		link: 'https://simet.co/',
+		primaryColor: '#73d36e',
+		secondaryColor: '#5d52fc'
+	},
+	{
+		name: 'Edupay',
+		description:
+			'Online payment platform for higher education institution.',
+		technologies: ['Express', 'React'],
+		link: 'https://github.com/Diseno-de-Software-2',
+		primaryColor: '#e71d36',
+		secondaryColor: '#470ff4'
+	},
+	{
 		name: 'Madland',
 		description: '2.5D multiplayer game with a cowboy theme. ',
 		technologies: ['C#', 'Unity'],
@@ -192,24 +215,6 @@ const projects: {
 		link: 'https://github.com/CamiloSinningUN/Gran-Evento',
 		primaryColor: '#4962DA',
 		secondaryColor: '#000000'
-	},
-	{
-		name: 'Edupay',
-		description:
-			'Online payment platform for higher education institution.',
-		technologies: ['Express', 'React'],
-		link: 'https://github.com/Diseno-de-Software-2',
-		primaryColor: '#e71d36',
-		secondaryColor: '#470ff4'
-	},
-	{
-		name: 'Soundfy',
-		description:
-			'A web page that allows you to create a playlist for your local music and reproduce it.',
-		technologies: ['HTML', 'CSS'],
-		link: 'https://github.com/CamiloSinningUN/Sounfy',
-		primaryColor: '#f45561',
-		secondaryColor: '#0aa3da'
 	},
 	{
 		name: 'University-bd',

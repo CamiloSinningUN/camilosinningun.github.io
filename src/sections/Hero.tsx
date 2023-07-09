@@ -82,13 +82,16 @@ function Hero() {
 					<a
 						href="https://github.com/CamiloSinningUN"
 						className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-white transition delay-75 duration-200 ease-in-out hover:scale-105"
+						target="_blank"
 					>
 						<FaGithub size={45} color="white" />
 					</a>
-					<a href="https://www.linkedin.com/in/camilo-sinning-49613a241/">
-						<button className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-white transition delay-75 duration-200 ease-in-out hover:scale-105">
-							<FaLinkedin size={45} color="white" />
-						</button>
+					<a
+						href="https://www.linkedin.com/in/camilo-sinning-49613a241/"
+						target="_blank"
+						className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-white transition delay-75 duration-200 ease-in-out hover:scale-105"
+					>
+						<FaLinkedin size={45} color="white" />
 					</a>
 				</div>
 			</motion.div>

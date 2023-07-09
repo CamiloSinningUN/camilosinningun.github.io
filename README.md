@@ -1,32 +1,32 @@
-# My Portfolio
+# My Portfolio :rocket:
 
-This is my personal portfolio website, where I showcase my skills, projects, and experience.
+This is my personal portfolio website, where I showcase my skills, projects, and experience. :muscle:
 
-## Technologies Used
+## Technologies Used :computer:
 
--   ReactJS
--   Vite
--   TypeScript
+-   ReactJS :atom_symbol:
+-   Vite :zap:
+-   TypeScript :blue_book:
 
-## Installation
+## Installation :wrench:
 
 1. Clone the repository: `git clone https://github.com/CamiloSinningUN/camilosinningun.github.io.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
-4. Open in your browser.
+4. Open in your browser. :globe_with_meridians:
 
-## Usage
+## Usage :bulb:
 
 This website is divided into several sections:
 
--   **About me**: A brief introduction to who I am.
--   **Projects**: A list of my recent projects, with descriptions and links to their repositories.
--   **Contact**: A form where you can send me a message.
+-   **About me**: A brief introduction to who I am. :wave:
+-   **Projects**: A list of my recent projects, with descriptions and links to their repositories. :clipboard:
+-   **Contact**: A form where you can send me a message. :email:
 
-## Contributing
+## Contributing :handshake:
 
-If you find a bug or have a suggestion for improvement, feel free to open an issue or submit a pull request.
+If you find a bug or have a suggestion for improvement, feel free to open an issue or submit a pull request. :raised_hands:
 
-## License
+## License :scroll:
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. :memo:

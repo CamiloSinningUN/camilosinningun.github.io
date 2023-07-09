@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -64,16 +65,32 @@ function Hero() {
 				</h2>
 			</motion.div>
 			<motion.div variants={itemVariants}>
-				<p className="opactity-80 w-full max-w-[500px] text-xl text-white">
+				<p className="opactity-8 mx-auto w-full max-w-[500px] text-xl text-white lg:mx-0">
 					{t('description')}
 				</p>
 			</motion.div>
-			<motion.div variants={itemVariants}>
+			<motion.div
+				variants={itemVariants}
+				className="mx-auto mt-11 flex flex-col items-center gap-4 md:flex-row lg:mx-0"
+			>
 				<a href="#contactme">
-					<button className="mt-11 h-16 w-60 rounded-lg border border-white text-2xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:scale-105  hover:shadow-white">
+					<button className="h-16 w-60 rounded-lg  bg-white text-2xl font-bold text-lightBlue transition delay-75 duration-200 ease-in-out hover:scale-105  hover:shadow-white">
 						{t('button')}
 					</button>
 				</a>
+				<div className="flex items-center gap-4">
+					<a
+						href="https://github.com/CamiloSinningUN"
+						className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-white transition delay-75 duration-200 ease-in-out hover:scale-105"
+					>
+						<FaGithub size={45} color="white" />
+					</a>
+					<a href="https://www.linkedin.com/in/camilo-sinning-49613a241/">
+						<button className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-white transition delay-75 duration-200 ease-in-out hover:scale-105">
+							<FaLinkedin size={45} color="white" />
+						</button>
+					</a>
+				</div>
 			</motion.div>
 		</motion.div>
 	);

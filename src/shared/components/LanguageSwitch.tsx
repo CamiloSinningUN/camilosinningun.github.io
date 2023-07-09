@@ -20,7 +20,7 @@ function LanguageSwitch({ type }: Props) {
 
 	return (
 		<motion.div
-			className={`fixed z-10 hidden items-center lg:flex ${
+			className={`fixed z-10 hidden items-center xl:flex  ${
 				type === 'top'
 					? 'left-[6.25rem] top-16 origin-top-left rotate-90'
 					: 'bottom-56 right-[6.25rem] origin-top-right -rotate-90'

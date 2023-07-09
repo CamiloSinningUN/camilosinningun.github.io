@@ -16,7 +16,7 @@ function Institution({ image, link, overshadow, setSelected, index }: Props) {
 				href={link}
 				target="_blank"
 				className={`group flex cursor-pointer items-center justify-center rounded-lg border border-gray bg-darkerGray p-5 transition delay-75 duration-200 ease-in-out ${
-					overshadow && 'opacity-50'
+					overshadow ? 'opacity-50' : 'opacity-100'
 				}`}
 			>
 				<img

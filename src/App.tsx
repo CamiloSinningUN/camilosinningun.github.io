@@ -35,7 +35,7 @@ function App() {
 				outerScale={1}
 				outerStyle={{
 					background:
-						'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0.52%, rgba(255, 255, 255, 0.05) 51.56%, rgba(255, 255, 255, 0) 100%)'
+						'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.08) 0.52%, rgba(255, 255, 255, 0.04) 51.56%, rgba(255, 255, 255, 0) 100%)'
 				}}
 				innerSize={0}
 			/>

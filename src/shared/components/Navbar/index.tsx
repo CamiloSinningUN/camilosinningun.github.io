@@ -54,9 +54,9 @@ function Navbar() {
 	return (
 		<div className="fixed z-20 w-screen px-3 py-4">
 			<motion.nav
-				className={`top-7 flex items-center justify-between px-4 py-3 lg:mx-11 ${
+				className={`top-7 flex items-center justify-between px-4 py-3 xl:mx-11 ${
 					showBackground &&
-					'lg:rounded-lg lg:bg-black lg:bg-opacity-30 lg:shadow-lg lg:backdrop-blur-sm'
+					'xl:rounded-lg xl:bg-black xl:bg-opacity-30 xl:shadow-lg xl:backdrop-blur-sm'
 				}`}
 				variants={containerVariants}
 				initial="hidden"
@@ -64,29 +64,29 @@ function Navbar() {
 			>
 				<motion.a href="" variants={itemVariants}>
 					<img
-						className="w-10 lg:h-8 lg:w-8"
+						className="w-10 xl:h-8 xl:w-8"
 						src={Logo}
 						alt="Camilo Sinning"
 					/>
 				</motion.a>
 				<button
-					className="lg:hidden"
+					className="xl:hidden"
 					onClick={() => setShowNavbar(true)}
 				>
 					<RxHamburgerMenu className="h-8 w-8 text-white" />
 				</button>
 				<div
-					className={`absolute right-0 top-0 flex h-screen w-3/5 flex-col items-center gap-9 bg-darkBlue text-base font-bold text-white shadow-lg transition delay-75 duration-200 ease-in-out lg:static lg:right-auto lg:top-auto lg:h-auto lg:w-auto lg:flex-row lg:bg-transparent lg:shadow-none ${
-						showNavbar ? '' : 'translate-x-full lg:translate-x-0'
+					className={`absolute right-0 top-0 flex h-screen w-3/5 flex-col items-center gap-9 bg-darkBlue text-base font-bold text-white shadow-lg transition delay-75 duration-200 ease-in-out xl:static xl:right-auto xl:top-auto xl:h-auto xl:w-auto xl:flex-row xl:bg-transparent xl:shadow-none ${
+						showNavbar ? '' : 'translate-x-full xl:translate-x-0'
 					}`}
 				>
 					<button
-						className="m-5 self-start focus:scale-95 active:scale-95 lg:hidden"
+						className="m-5 self-start focus:scale-95 active:scale-95 xl:hidden"
 						onClick={() => setShowNavbar(false)}
 					>
 						<AiOutlineClose className="h-8 w-8 text-white" />
 					</button>
-					<ul className="flex flex-col gap-9 text-center lg:flex-row">
+					<ul className="flex flex-col gap-9 text-center xl:flex-row">
 						<Item variants={itemVariants}>
 							<a href="#aboutme">{t('aboutme')}</a>
 						</Item>
@@ -115,7 +115,7 @@ function Navbar() {
 						</a>
 					</motion.div>
 
-					<div className="mt-auto flex w-full flex-col px-5 lg:hidden">
+					<div className="mt-auto flex w-full flex-col px-5 xl:hidden">
 						<div className="mx-auto mb-3 flex w-fit items-center justify-center gap-5 rounded-lg bg-white bg-opacity-20 px-5 py-2">
 							<a
 								href="https://www.linkedin.com/in/camilo-sinning-49613a241/"
@@ -147,7 +147,7 @@ function Navbar() {
 				</div>
 			</motion.nav>
 			{showBackground && (
-				<div className="mx-auto hidden h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20 lg:block" />
+				<div className="mx-auto hidden h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20 xl:block" />
 			)}
 		</div>
 	);

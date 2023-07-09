@@ -1,5 +1,4 @@
 import EYELAND from '@images/EYELAND.png';
-import { FiArrowUpRight } from 'react-icons/fi';
 import { GoProjectSymlink } from 'react-icons/go';
 import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
 import { LuGithub } from 'react-icons/lu';

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Aboutme from '@sections/Aboutme';
 import AnimatedCursor from 'react-animated-cursor';
 import Contactme from '@sections/Contactme';
+import { FaArrowDown } from 'react-icons/fa';
 import Footer from '@components/Footer';
 import Hero from '@sections/Hero';
 import LanguageSwitch from '@components/LanguageSwitch';
@@ -46,6 +47,9 @@ function App() {
 			<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
 				<div className="mx-auto max-w-screen-lg justify-start pt-28 lg:pt-0">
 					<Hero />
+				</div>
+				<div className="aboslute mx-auto -mt-10 h-screen text-center font-bold text-white">
+					<FaArrowDown className="mx-auto animate-bounce text-center text-white" />
 				</div>
 			</div>
 			<div className="absolute top-[100vh] w-screen bg-veryDarkGray px-4">

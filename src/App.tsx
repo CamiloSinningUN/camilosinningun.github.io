@@ -68,7 +68,6 @@ function App() {
 					>
 						<Projects />
 					</div>
-					<div></div>
 					<div
 						ref={contactmeRef}
 						id="contactme"

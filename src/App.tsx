@@ -44,11 +44,11 @@ function App() {
 			<Navbar />
 			<Title />
 			<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
-				<div className="mx-auto justify-start px-4 pt-28 lg:max-w-screen-lg lg:pt-0">
+				<div className="mx-auto max-w-screen-lg justify-start pt-28 lg:pt-0">
 					<Hero />
 				</div>
 			</div>
-			<div className="absolute top-[100vh] w-full bg-veryDarkGray px-4">
+			<div className="absolute top-[100vh] w-screen bg-veryDarkGray px-4">
 				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col">
 					<div
 						ref={aboutmeRef}

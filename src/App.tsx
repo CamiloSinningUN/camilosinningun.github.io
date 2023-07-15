@@ -51,14 +51,26 @@ function App() {
 				<Hero />
 			</header>
 			<main className="absolute top-[100vh] w-screen bg-veryDarkGray px-4">
-				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col gap-32 lg:gap-48">
-					<section ref={aboutmeRef} id="aboutme">
+				<div className="mx-auto mt-40 flex max-w-screen-lg flex-col">
+					<section
+						ref={aboutmeRef}
+						id="aboutme"
+						className="pt-16 lg:pt-24"
+					>
 						<Aboutme />
 					</section>
-					<section ref={projectsRef} id="projects">
+					<section
+						ref={projectsRef}
+						id="projects"
+						className="py-16 lg:py-24"
+					>
 						<Projects />
 					</section>
-					<section ref={contactmeRef} id="contactme">
+					<section
+						ref={contactmeRef}
+						id="contactme"
+						className="pt-16 lg:pt-24"
+					>
 						<Contactme />
 					</section>
 					<Footer />

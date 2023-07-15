@@ -104,7 +104,9 @@ function Hero() {
 				</motion.div>
 			</div>
 			<div className="aboslute mx-auto -mt-10 h-screen text-center font-bold text-white">
-				<FaArrowDown className="mx-auto animate-bounce text-center text-white" />
+				<a href="#aboutme">
+					<FaArrowDown className="mx-auto animate-bounce text-center text-white" />
+				</a>
 			</div>
 		</div>
 	);

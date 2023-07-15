@@ -62,7 +62,7 @@ function Contactme() {
 		>
 			<ToastContainer />
 			<div className="mx-auto flex w-full flex-row justify-center">
-				<div className="relative mx-auto h-[734px] w-full max-w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
+				<form className="relative mx-auto h-[734px] w-full max-w-[698px] rounded-lg border border-gray bg-black drop-shadow-strongBlue">
 					<div
 						className="absolute -right-[4.6rem] top-10 hidden h-[136px] w-[74px] flex-col items-center justify-start gap-2 pl-3 pt-4 lg:flex"
 						style={{ backgroundImage: `url(${Social})` }}
@@ -116,7 +116,7 @@ function Contactme() {
 							{!loading ? t('send') : t('sending')}
 						</button>
 					</div>
-				</div>
+				</form>
 			</div>
 		</motion.div>
 	);

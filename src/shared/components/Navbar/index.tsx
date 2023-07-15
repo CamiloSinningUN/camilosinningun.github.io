@@ -52,7 +52,7 @@ function Navbar() {
 	}, []);
 
 	return (
-		<div className="fixed z-20 w-screen px-3 py-4">
+		<nav className="fixed z-20 w-screen px-3 py-4">
 			<motion.nav
 				className={`top-7 flex items-center justify-between px-4 py-3 xl:mx-11 ${
 					showBackground &&
@@ -75,7 +75,7 @@ function Navbar() {
 				>
 					<RxHamburgerMenu className="h-8 w-8 text-white" />
 				</button>
-				<div
+				<nav
 					className={`absolute right-0 top-0 flex h-screen w-3/5 flex-col items-center gap-9 bg-darkBlue text-base font-bold text-white shadow-lg transition delay-75 duration-200 ease-in-out xl:static xl:right-auto xl:top-auto xl:h-auto xl:w-auto xl:flex-row xl:bg-transparent xl:shadow-none ${
 						showNavbar ? '' : 'translate-x-full xl:translate-x-0'
 					}`}
@@ -87,18 +87,21 @@ function Navbar() {
 						<AiOutlineClose className="h-8 w-8 text-white" />
 					</button>
 					<ul className="flex flex-col gap-9 text-center xl:flex-row">
-						<Item variants={itemVariants}>
-							<a href="#aboutme">{t('aboutme')}</a>
-						</Item>
-						{/* <Item variants={itemVariants}>
-							<a href="#skills">{t('skills')}</a>
-						</Item> */}
-						<Item variants={itemVariants}>
-							<a href="#projects">{t('projects')}</a>
-						</Item>
-						<Item variants={itemVariants}>
-							<a href="#contactme">{t('contactme')}</a>
-						</Item>
+						<Item
+							variants={itemVariants}
+							href="#aboutme"
+							content={t('aboutme')}
+						/>
+						<Item
+							variants={itemVariants}
+							href="#projects"
+							content={t('projects')}
+						/>
+						<Item
+							variants={itemVariants}
+							href="#contactme"
+							content={t('contactme')}
+						/>
 					</ul>
 
 					<motion.div variants={itemVariants}>
@@ -144,12 +147,12 @@ function Navbar() {
 							{language.name}
 						</button>
 					</div>
-				</div>
+				</nav>
 			</motion.nav>
 			{showBackground && (
 				<div className="mx-auto hidden h-[0.5px] w-3/4 bg-gradient-to-r from-veryDarkGray via-white to-veryDarkGray opacity-20 xl:block" />
 			)}
-		</div>
+		</nav>
 	);
 }
 

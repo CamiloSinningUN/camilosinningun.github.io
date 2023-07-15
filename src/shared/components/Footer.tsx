@@ -4,7 +4,7 @@ function Footer() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="mx-auto my-9 mt-20 text-center opacity-70">
+		<footer className="mx-auto my-9 -mt-32 text-center opacity-70">
 			<p className="text-xl text-white">
 				{t('footer')}{' '}
 				<a
@@ -15,7 +15,7 @@ function Footer() {
 					Camilo Sinning
 				</a>
 			</p>
-		</div>
+		</footer>
 	);
 }
 

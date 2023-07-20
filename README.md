@@ -7,6 +7,8 @@ This is my personal portfolio website, where I showcase my skills, projects, and
 -   ReactJS :atom_symbol:
 -   Vite :zap:
 -   TypeScript :blue_book:
+-   TailwindCSS :art:
+
 
 ## Installation :wrench:
 

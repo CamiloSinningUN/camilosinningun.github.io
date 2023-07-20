@@ -67,6 +67,7 @@ function Navbar() {
 						className="w-10 xl:h-8 xl:w-8"
 						src={Logo}
 						alt="Camilo Sinning"
+						loading="lazy"
 					/>
 				</motion.a>
 				<button

@@ -1,12 +1,24 @@
+import { useTranslation } from 'react-i18next';
+
 interface Props {
 	image: string;
 	link: string;
 	overshadow: boolean;
 	setSelected: (value: number) => void;
 	index: number;
+	alt?: string;
 }
 
-function Institution({ image, link, overshadow, setSelected, index }: Props) {
+function Institution({
+	image,
+	link,
+	overshadow,
+	setSelected,
+	index,
+	alt
+}: Props) {
+	const { t } = useTranslation('', { keyPrefix: 'aboutme.alt' });
+
 	return (
 		<div
 			onMouseEnter={() => setSelected(index)}
@@ -22,7 +34,8 @@ function Institution({ image, link, overshadow, setSelected, index }: Props) {
 				<img
 					className="h-20 w-20 object-contain grayscale transition delay-75 duration-300 ease-in-out group-hover:grayscale-0"
 					src={image}
-					alt=""
+					alt={alt ? alt : t('institution')}
+					loading="lazy"
 				/>
 			</a>
 		</div>

@@ -58,7 +58,8 @@ function Projects() {
 					<img
 						className="max-h-[362px] w-full max-w-[680px] object-fill"
 						src={EYELAND}
-						alt=""
+						alt={t('biggestproject.alt.photo')}
+						loading="lazy"
 					/>
 				</div>
 				<div className="-order-1 flex flex-col items-end self-end">
@@ -80,7 +81,7 @@ function Projects() {
 							</Span>{' '}
 							{t('biggestproject.description.line_2')}
 						</p>
-						<div className="mt-5 text-sm font-extrabold tracking-wide opacity-30">
+						<div className="mt-5 text-sm font-extrabold tracking-wide opacity-40">
 							Typescript - React native - Expo - React - Vite
 						</div>
 					</div>

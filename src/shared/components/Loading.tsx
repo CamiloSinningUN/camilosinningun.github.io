@@ -49,10 +49,11 @@ function Loading() {
 			<motion.img
 				className="h-16 w-16  border-white"
 				src={Logo}
-				alt=""
+				alt="Camilo Sinning"
 				variants={logoVariants}
 				initial="initial"
 				animate="animate"
+				loading="lazy"
 			/>
 			<motion.div
 				className="flex w-full items-center"

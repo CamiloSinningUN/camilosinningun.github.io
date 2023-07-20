@@ -40,6 +40,9 @@
 			"deeplearning": "Deep Learning",
 			"machinelearning": "Machine Learning",
 			"datamodeling": "Data Modeling"
+		},
+		"alt": {
+			"institución": "Institución"
 		}
 	},
 	"projects": {
@@ -48,6 +51,9 @@
 			"description": {
 				"line_1": "Programa educativo",
 				"line_2": "para estudiantes de secundaria para la construcción de aplicaciones móviles para promover la inclusión de personas con discapacidad visual."
+			},
+			"alt": {
+				"foto": "Página de inicio de Eyeland"
 			}
 		},
 		"otherprojects": {

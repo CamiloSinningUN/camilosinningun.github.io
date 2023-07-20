@@ -94,7 +94,12 @@ function Aboutme() {
 					})}
 				</div>
 				<div className="absolute left-20 flex items-center justify-center">
-					<img className="scale-150" src={Grid} alt="" />
+					<img
+						className="scale-150"
+						src={Grid}
+						loading="lazy"
+						aria-hidden="true"
+					/>
 				</div>
 			</div>
 		</motion.div>
@@ -105,26 +110,31 @@ const institutions = [
 	{
 		image: Uninorte,
 		link: 'https://www.uninorte.edu.co/',
+		alt: 'Universidad del Norte',
 		skip: 1
 	},
 	{
 		image: Coursera,
 		link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/5JJ5C5BCKC9X',
+		alt: 'DeepLearning.AI',
 		skip: 0
 	},
 	{
 		image: Coursera,
 		link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/EG98VT5EZD4Q',
+		alt: 'DeepLearning.AI',
 		skip: 0
 	},
 	{
 		image: Udemy,
 		link: 'https://www.udemy.com/certificate/UC-d555fb16-1664-4e9a-9679-c6a13ab70f5f/',
+		alt: 'Udemy',
 		skip: 0
 	},
 	{
 		image: Polimi,
 		link: 'https://www.polimi.it/',
+		alt: 'Politecnico di Milano',
 		skip: 3
 	}
 ];

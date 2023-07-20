@@ -163,7 +163,6 @@ function Projects() {
 							>
 								{t('otherprojects.seemore')}
 							</a>
-							{/* <FiArrowUpRight className="ml-2" /> */}
 						</div>
 						<div className="relative -left-full border-t-2 border-white transition-transform delay-75 duration-200 ease-in-out group-hover:translate-x-full" />
 					</div>

@@ -54,13 +54,18 @@ function Projects() {
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
 				<div className="left-0 mb-5 max-h-[362px] w-full max-w-[680px] overflow-hidden rounded-lg lg:absolute">
-					<div className="absolute hidden h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0 lg:block" />
-					<img
-						className="max-h-[362px] w-full max-w-[680px] object-fill"
-						src={EYELAND}
-						alt={t('biggestproject.alt.photo')}
-						loading="lazy"
-					/>
+					<a
+						href="https://proyecto-final-epics.github.io/EyelandWebPage/#/"
+						target="_blank"
+					>
+						<div className="absolute hidden h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0 lg:block" />
+						<img
+							className="max-h-[362px] w-full max-w-[680px] object-fill"
+							src={EYELAND}
+							alt={t('biggestproject.alt.photo')}
+							loading="lazy"
+						/>
+					</a>
 				</div>
 				<div className="-order-1 flex flex-col items-end self-end">
 					<div className="relative left-0">

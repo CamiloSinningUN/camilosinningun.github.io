@@ -40,7 +40,7 @@ function Hero() {
 
 	return (
 		<div className="fixed -z-10 h-auto min-h-screen w-screen bg-lightBlue">
-			<div className="mx-auto max-w-screen-lg justify-start pt-28 lg:pt-0">
+			<div className="mx-auto max-w-screen-lg justify-start px-5 pt-24 lg:px-0 lg:pt-0">
 				<motion.div
 					className="flex h-auto min-h-screen flex-col text-center sm:justify-center lg:text-start"
 					variants={containerVariants}

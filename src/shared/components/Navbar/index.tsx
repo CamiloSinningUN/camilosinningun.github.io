@@ -52,7 +52,7 @@ function Navbar() {
 	}, []);
 
 	return (
-		<nav className="fixed z-20 w-screen px-3 py-4">
+		<nav className="fixed z-30 w-screen px-3 py-4">
 			<motion.nav
 				className={`top-7 flex items-center justify-between px-4 py-3 xl:mx-11 ${
 					showBackground &&

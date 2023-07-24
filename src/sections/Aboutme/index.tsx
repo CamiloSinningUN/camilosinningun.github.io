@@ -38,7 +38,7 @@ function Aboutme() {
 
 	return (
 		<motion.div
-			className="flex flex-col-reverse gap-20 overflow-hidden lg:flex-row lg:gap-0"
+			className="flex flex-col-reverse gap-20 overflow-hidden lg:flex-row"
 			variants={itemVariants}
 			initial="hidden"
 			whileInView="visible"
@@ -52,12 +52,12 @@ function Aboutme() {
 					{t('paragraph_1.line_3')}
 					<Span>{t('paragraph_1.line_4')}</Span>
 					{t('paragraph_1.line_5')}
-					<Span>{t('paragraph_1.line_6')}</Span>
+					<Span rightSpace={false}>{t('paragraph_1.line_6')}</Span>
 					{t('paragraph_1.line_7')}
 				</p>
 				<p>
 					{t('paragraph_2.line_1')}
-					<Span>{t('paragraph_2.line_2')}</Span>
+					<Span rightSpace={false}>{t('paragraph_2.line_2')}</Span>
 					{t('paragraph_2.line_3')}
 				</p>
 				<div>
@@ -69,8 +69,8 @@ function Aboutme() {
 					</ul>
 				</div>
 			</div>
-			<div className="relative aspect-square w-full lg:w-1/2">
-				<div className="absolute right-0 z-10 grid grid-cols-3 grid-rows-3 gap-3">
+			<div className="relative aspect-square w-11/12 lg:w-1/2">
+				<div className="absolute right-0 z-10 grid aspect-square w-full grid-cols-3 grid-rows-3 items-center gap-3">
 					{institutions.map((institution, index) => {
 						return (
 							<React.Fragment key={index}>

@@ -55,7 +55,7 @@ function App() {
 					<section
 						ref={aboutmeRef}
 						id="aboutme"
-						className="pt-16 lg:pt-24"
+						className="py-16 lg:pt-24"
 					>
 						<Aboutme />
 					</section>

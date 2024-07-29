@@ -6,7 +6,8 @@ export default {
 		'text-verySoftCyan',
 		'text-verySoftBlue',
 		'text-verySoftLimeGreen',
-		'text-verySoftRed'
+		'text-verySoftRed',
+		'text-verySoftOrange'
 	],
 	theme: {
 		extend: {
@@ -17,6 +18,7 @@ export default {
 				verySoftLimeGreen: '#ACF8BB',
 				verySoftCyan: '#ACF8EF',
 				verySoftBlue: '#ACB4F8',
+				verySoftOrange: '#F8D3AC',
 				brightViolet: '#662DDD',
 				darkViolet: '#3904AB',
 				darkCyanLimeGreen: '#0f8944',

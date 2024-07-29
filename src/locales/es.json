@@ -17,6 +17,7 @@
 	"title": {
 		"aboutme": "Sobre mí",
 		"skills": "Habilidades",
+		"highlights": "Destacados",
 		"projects": "Proyectos",
 		"contactme": "Contáctame"
 	},
@@ -45,21 +46,21 @@
 			"institución": "Institución"
 		}
 	},
-	"projects": {
-		"biggestproject": {
-			"title": "Proyecto más grande",
+	"highlights": {
+		"eyeland": {
+			"title": "Proyecto Más Grande",
 			"description": {
 				"line_1": "Programa educativo",
-				"line_2": "para estudiantes de secundaria para la construcción de aplicaciones móviles para promover la inclusión de personas con discapacidad visual."
+				"line_2": "para estudiantes de secundaria para la construcción de aplicaciones móviles para promover la inclusión de personas con discapacidades visuales."
 			},
 			"alt": {
-				"foto": "Página de inicio de Eyeland"
+				"photo": "Página de aterrizaje de Eyeland"
 			}
-		},
-		"otherprojects": {
-			"title": "Otros proyectos",
-			"seemore": "Ver más..."
 		}
+	},
+	"projects": {
+		"title": "Proyectos",
+		"seemore": "Ver más..."
 	},
 	"contactme": {
 		"name": "Nombre",

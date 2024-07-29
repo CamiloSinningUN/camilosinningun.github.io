@@ -8,28 +8,30 @@ import {
 
 interface SectionContextProps {
 	section: {
-		name: 'aboutme' | 'skills' | 'projects' | 'contactme';
+		name: 'aboutme' | 'skills' | 'highlights' | 'projects' | 'contactme';
 		color:
-			| 'verySoftRed'
-			| 'verySoftLimeGreen'
-			| 'verySoftCyan'
-			| 'verySoftBlue';
+		| 'verySoftRed'
+		| 'verySoftOrange'
+		| 'verySoftLimeGreen'
+		| 'verySoftCyan'
+		| 'verySoftBlue';
 	} | null;
 	setSection: Dispatch<
 		SetStateAction<{
-			name: 'aboutme' | 'skills' | 'projects' | 'contactme';
+			name: 'aboutme' | 'skills' | 'highlights' | 'projects' | 'contactme';
 			color:
-				| 'verySoftRed'
-				| 'verySoftLimeGreen'
-				| 'verySoftCyan'
-				| 'verySoftBlue';
+			| 'verySoftRed'
+			| 'verySoftOrange'
+			| 'verySoftLimeGreen'
+			| 'verySoftCyan'
+			| 'verySoftBlue';
 		} | null>
 	>;
 }
 
 export const SectionContext = createContext<SectionContextProps>({
 	section: null,
-	setSection: () => {}
+	setSection: () => { }
 });
 
 const SectionContextProvider = ({ children }: { children: ReactNode }) => {

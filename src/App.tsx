@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Aboutme from '@sections/Aboutme';
 import AnimatedCursor from 'react-animated-cursor';
 // import Contactme from '@sections/Contactme';
+import Highlights from '@sections/Highlights';
 import Footer from '@components/Footer';
 import Hero from '@sections/Hero';
 import LanguageSwitch from '@components/LanguageSwitch';
@@ -14,7 +15,7 @@ import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
 	// const { aboutmeRef, projectsRef, contactmeRef } = useObserverSections();
-	const { aboutmeRef, projectsRef } = useObserverSections();
+	const { aboutmeRef, projectsRef, highlightsRef } = useObserverSections();
 	const [isLoading, setIsLoading] = useState(true);
 
 	const animatedCursorProps = useMemo(() => {
@@ -34,7 +35,7 @@ function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			setIsLoading(false);
-		}, 1600);
+		}, 1100);
 	}, []);
 
 	if (isLoading) {
@@ -59,6 +60,13 @@ function App() {
 						className="py-16 lg:pt-24"
 					>
 						<Aboutme />
+					</section>
+					<section
+						ref={highlightsRef}
+						id="highlights"
+						className="py-16 lg:py-24"
+					>
+						<Highlights />
 					</section>
 					<section
 						ref={projectsRef}

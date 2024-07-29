@@ -9,6 +9,9 @@ const useObserverSections = () => {
 	const [skillsRef, skillsInView] = useInView({
 		threshold: 0.5
 	});
+	const [highlightsRef, highlightsInView] = useInView({
+		threshold: 0.5
+	});
 	const [projectsRef, projectsInView] = useInView({
 		threshold: 0.5
 	});
@@ -23,11 +26,12 @@ const useObserverSections = () => {
 			!skillsInView &&
 			!projectsInView &&
 			!contactmeInView &&
-			!aboutmeInView
+			!aboutmeInView &&
+			!highlightsInView
 		) {
 			setSection(null);
 		}
-	}, [skillsInView, projectsInView, contactmeInView, aboutmeInView]);
+	}, [skillsInView, projectsInView, contactmeInView, aboutmeInView, highlightsInView]);
 
 	useEffect(() => {
 		if (aboutmeInView) {
@@ -46,6 +50,15 @@ const useObserverSections = () => {
 			});
 		}
 	}, [skillsInView, setSection]);
+
+	useEffect(() => {
+		if (highlightsInView) {
+			setSection({
+				name: 'highlights',
+				color: 'verySoftOrange'
+			});
+		}
+	}, [highlightsInView, setSection]);
 
 	useEffect(() => {
 		if (projectsInView) {
@@ -69,7 +82,8 @@ const useObserverSections = () => {
 		aboutmeRef,
 		skillsRef,
 		projectsRef,
-		contactmeRef
+		contactmeRef,
+		highlightsRef
 	};
 };
 

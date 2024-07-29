@@ -21,7 +21,7 @@ function Navbar() {
 		visible: {
 			transition: {
 				delayChildren: 0,
-				staggerChildren: 0.2
+				staggerChildren: 0.1
 			}
 		}
 	};
@@ -54,10 +54,9 @@ function Navbar() {
 	return (
 		<nav className="fixed z-30 w-screen px-3 py-4">
 			<motion.nav
-				className={`top-7 flex items-center justify-between px-4 py-3 xl:mx-11 ${
-					showBackground &&
+				className={`top-7 flex items-center justify-between px-4 py-3 xl:mx-11 ${showBackground &&
 					'xl:rounded-lg xl:bg-black xl:bg-opacity-30 xl:shadow-lg xl:backdrop-blur-sm'
-				}`}
+					}`}
 				variants={containerVariants}
 				initial="hidden"
 				animate="visible"
@@ -77,9 +76,8 @@ function Navbar() {
 					<RxHamburgerMenu className="h-8 w-8 text-white" />
 				</button>
 				<nav
-					className={`absolute right-0 top-0 flex h-screen w-3/5 flex-col items-center gap-9 bg-darkBlue text-base font-bold text-white shadow-lg transition delay-75 duration-200 ease-in-out xl:static xl:right-auto xl:top-auto xl:h-auto xl:w-auto xl:flex-row xl:bg-transparent xl:shadow-none ${
-						showNavbar ? '' : 'translate-x-full xl:translate-x-0'
-					}`}
+					className={`absolute right-0 top-0 flex h-screen w-3/5 flex-col items-center gap-9 bg-darkBlue text-base font-bold text-white shadow-lg transition delay-75 duration-200 ease-in-out xl:static xl:right-auto xl:top-auto xl:h-auto xl:w-auto xl:flex-row xl:bg-transparent xl:shadow-none ${showNavbar ? '' : 'translate-x-full xl:translate-x-0'
+						}`}
 				>
 					<button
 						className="m-5 self-start focus:scale-95 active:scale-95 xl:hidden"

@@ -17,6 +17,7 @@
 	"title": {
 		"aboutme": "About me",
 		"skills": "Skills",
+		"highlights": "Highlights",
 		"projects": "Projects",
 		"contactme": "Contact me"
 	},
@@ -45,8 +46,9 @@
 			"institution": "Institution"
 		}
 	},
-	"projects": {
-		"biggestproject": {
+	"highlights": {
+		"title": "Highlights",
+		"eyeland": {
 			"title": "Biggest Project",
 			"description": {
 				"line_1": "Educational program",
@@ -55,11 +57,11 @@
 			"alt": {
 				"photo": "Eyeland landing page"
 			}
-		},
-		"otherprojects": {
-			"title": "Other Projects",
-			"seemore": "See more..."
 		}
+	},
+	"projects": {
+		"title": "Projects",
+		"seemore": "See more..."
 	},
 	"contactme": {
 		"name": "Name",

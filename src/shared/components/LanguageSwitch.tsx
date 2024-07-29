@@ -15,16 +15,15 @@ function LanguageSwitch({ type }: Props) {
 			y: -50,
 			rotate: type === 'top' ? 90 : -90
 		},
-		visible: { opacity: 1, y: 0, transition: { delay: 1 } }
+		visible: { opacity: 1, y: 0, transition: { delay: 0.5 } }
 	};
 
 	return (
 		<motion.div
-			className={`fixed z-10 hidden items-center xl:flex  ${
-				type === 'top'
+			className={`fixed z-10 hidden items-center xl:flex  ${type === 'top'
 					? 'left-[6.25rem] top-16 origin-top-left rotate-90'
 					: 'bottom-56 right-[6.25rem] origin-top-right -rotate-90'
-			}`}
+				}`}
 			variants={containerVariants}
 			initial="hidden"
 			animate="visible"

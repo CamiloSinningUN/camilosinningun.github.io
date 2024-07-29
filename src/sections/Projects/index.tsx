@@ -46,77 +46,7 @@ function Projects() {
 	return (
 		<div className="text-white">
 			<motion.div
-				className="relative flex flex-col items-center"
-				variants={itemVariants}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true, amount: 0.3 }}
-				transition={{ duration: 0.5, delay: 0.2 }}
-			>
-				<div className="left-0 mb-5 max-h-[362px] w-full max-w-[680px] overflow-hidden rounded-lg lg:absolute">
-					<a
-						href="https://proyecto-final-epics.github.io/EyelandWebPage/#/"
-						target="_blank"
-					>
-						<div className="absolute hidden h-full w-full bg-brightCyanLimeGreen bg-opacity-30 transition delay-75 duration-300 ease-in-out hover:bg-opacity-0 lg:block" />
-						<img
-							className="max-h-[362px] w-full max-w-[680px] object-fill"
-							src={EYELAND}
-							alt={t('biggestproject.alt.photo')}
-							loading="lazy"
-						/>
-					</a>
-				</div>
-				<div className="-order-1 flex flex-col items-end self-end">
-					<div className="relative left-0">
-						<h5 className="relative text-xl font-normal text-softCyan">
-							{t('biggestproject.title')}
-						</h5>
-						<div className="absolute -bottom-2 h-5 w-full bg-softCyan bg-opacity-20" />
-					</div>
-					<h4 className="my-4 bg-gradient-to-br from-darkCyanLimeGreen to-brightCyanLimeGreen bg-clip-text text-6xl font-black tracking-tight text-transparent">
-						EYELAND
-					</h4>
-				</div>
-				<div className="flex w-full flex-col items-end">
-					<div className="w-full max-w-[558px] rounded-lg rounded-ee-none border border-gray bg-darkGray p-5 text-right drop-shadow-brightCyanLimeGreen">
-						<p className="text-base font-medium leading-snug">
-							<Span>
-								{t('biggestproject.description.line_1')}
-							</Span>{' '}
-							{t('biggestproject.description.line_2')}
-						</p>
-						<div className="mt-5 text-sm font-extrabold tracking-wide opacity-40">
-							Typescript - React native - Expo - React - Vite
-						</div>
-					</div>
-					<div className="mt-3 flex items-stretch gap-2 rounded-lg rounded-se-none bg-darkGray p-2">
-						<a
-							href="https://proyecto-final-epics.github.io/EyelandWebPage/"
-							target="_blank"
-						>
-							<GoProjectSymlink className="text-2xl text-white opacity-80 hover:opacity-100" />
-						</a>
-						<div className="w-0.5 bg-white bg-opacity-20" />
-						<a
-							href="/files/Sinning_Vergara_Lizcano.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<HiOutlineDocumentMagnifyingGlass className="text-2xl text-white opacity-80 hover:opacity-100" />
-						</a>
-						<div className="w-0.5 bg-white bg-opacity-20" />
-						<a
-							href="https://github.com/Proyecto-Final-EPICS/EyelandApp"
-							target="_blank"
-						>
-							<LuGithub className="text-2xl text-white opacity-80 hover:opacity-100" />
-						</a>
-					</div>
-				</div>
-			</motion.div>
-			<motion.div
-				className="mt-20 flex flex-col items-center lg:mt-40"
+				className="mt-10 flex flex-col items-center lg:mt-20"
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -124,8 +54,8 @@ function Projects() {
 			>
 				<motion.div variants={itemVariants}>
 					<div className="relative mb-12">
-						<h3 className="relative text-center text-3xl font-bold tracking-tight text-softViolet lg:text-4xl">
-							{t('otherprojects.title')}
+						<h3 className="relative text-center text-3xl font-bold tracking-tight text-softViolet lg:text-5xl">
+							{t('title')}
 						</h3>
 						<div className="absolute -bottom-2 h-5 w-full bg-softViolet bg-opacity-20" />
 					</div>
@@ -166,7 +96,7 @@ function Projects() {
 								href="https://github.com/CamiloSinningUN?tab=repositories"
 								target="_blank"
 							>
-								{t('otherprojects.seemore')}
+								{t('seemore')}
 							</a>
 						</div>
 						<div className="relative -left-full border-t-2 border-white transition-transform delay-75 duration-200 ease-in-out group-hover:translate-x-full" />
@@ -185,58 +115,58 @@ const projects: {
 	primaryColor: string;
 	secondaryColor: string;
 }[] = [
-	{
-		name: 'SIMET',
-		description:
-			'A web page that strengthens mutual aid in industrial emergencies through a network of companies.',
-		technologies: ['Angular', 'Goople Maps API'],
-		link: 'https://simet.co/',
-		primaryColor: '#73d36e',
-		secondaryColor: '#5d52fc'
-	},
-	{
-		name: 'Edupay',
-		description:
-			'Online payment platform for higher education institution.',
-		technologies: ['Express', 'React'],
-		link: 'https://github.com/Diseno-de-Software-2',
-		primaryColor: '#e71d36',
-		secondaryColor: '#470ff4'
-	},
-	{
-		name: 'Madland',
-		description: '2.5D multiplayer game with a cowboy theme. ',
-		technologies: ['C#', 'Unity'],
-		link: 'https://github.com/CamiloSinningUN/MadLand',
-		primaryColor: '#A1D781',
-		secondaryColor: '#EFCA84'
-	},
-	{
-		name: 'Gran evento',
-		description:
-			'This project is a web page that allows users to find and attend events in their city.',
-		technologies: ['JavaScript', 'React'],
-		link: 'https://github.com/CamiloSinningUN/Gran-Evento',
-		primaryColor: '#4962DA',
-		secondaryColor: '#000000'
-	},
-	{
-		name: 'University-bd',
-		description:
-			'Web page which manages a database in SQL that contains the information of a university.',
-		technologies: ['MySQL', 'Handlebars'],
-		link: 'https://github.com/CamiloSinningUN/University-bbdd',
-		primaryColor: '#fe84e7',
-		secondaryColor: '#424361'
-	},
-	{
-		name: 'Taken game',
-		description: 'Web page with a taken game.',
-		technologies: ['HTML', 'CSS'],
-		link: 'https://github.com/CamiloSinningUN/TakenGame',
-		primaryColor: '#a668fc',
-		secondaryColor: '#52d053'
-	}
-];
+		{
+			name: 'SIMET',
+			description:
+				'A web page that strengthens mutual aid in industrial emergencies through a network of companies.',
+			technologies: ['Angular', 'Goople Maps API'],
+			link: 'https://simet.co/',
+			primaryColor: '#73d36e',
+			secondaryColor: '#5d52fc'
+		},
+		{
+			name: 'Edupay',
+			description:
+				'Online payment platform for higher education institution.',
+			technologies: ['Express', 'React'],
+			link: 'https://github.com/Diseno-de-Software-2',
+			primaryColor: '#e71d36',
+			secondaryColor: '#470ff4'
+		},
+		{
+			name: 'Madland',
+			description: '2.5D multiplayer game with a cowboy theme. ',
+			technologies: ['C#', 'Unity'],
+			link: 'https://github.com/CamiloSinningUN/MadLand',
+			primaryColor: '#A1D781',
+			secondaryColor: '#EFCA84'
+		},
+		{
+			name: 'Gran evento',
+			description:
+				'This project is a web page that allows users to find and attend events in their city.',
+			technologies: ['JavaScript', 'React'],
+			link: 'https://github.com/CamiloSinningUN/Gran-Evento',
+			primaryColor: '#4962DA',
+			secondaryColor: '#000000'
+		},
+		{
+			name: 'University-bd',
+			description:
+				'Web page which manages a database in SQL that contains the information of a university.',
+			technologies: ['MySQL', 'Handlebars'],
+			link: 'https://github.com/CamiloSinningUN/University-bbdd',
+			primaryColor: '#fe84e7',
+			secondaryColor: '#424361'
+		},
+		{
+			name: 'Taken game',
+			description: 'Web page with a taken game.',
+			technologies: ['HTML', 'CSS'],
+			link: 'https://github.com/CamiloSinningUN/TakenGame',
+			primaryColor: '#a668fc',
+			secondaryColor: '#52d053'
+		}
+	];
 
 export default Projects;

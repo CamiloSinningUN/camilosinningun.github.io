@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import Aboutme from '@sections/Aboutme';
 import AnimatedCursor from 'react-animated-cursor';
-// import Contactme from '@sections/Contactme';
+import Contactme from '@sections/Contactme';
 import Highlights from '@sections/Highlights';
 import Footer from '@components/Footer';
 import Hero from '@sections/Hero';
@@ -14,8 +14,7 @@ import Title from '@components/Title';
 import useObserverSections from '@hooks/useObserveSections';
 
 function App() {
-	// const { aboutmeRef, projectsRef, contactmeRef } = useObserverSections();
-	const { aboutmeRef, projectsRef, highlightsRef } = useObserverSections();
+	const { aboutmeRef, projectsRef, contactmeRef, highlightsRef } = useObserverSections();
 	const [isLoading, setIsLoading] = useState(true);
 
 	const animatedCursorProps = useMemo(() => {
@@ -75,13 +74,13 @@ function App() {
 					>
 						<Projects />
 					</section>
-					{/* <section
+					<section
 						ref={contactmeRef}
 						id="contactme"
 						className="pt-16 lg:pt-24"
 					>
 						<Contactme />
-					</section> */}
+					</section>
 					<Footer />
 				</div>
 			</main>

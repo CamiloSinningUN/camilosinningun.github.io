@@ -1,9 +1,4 @@
-import EYELAND from '@images/EYELAND.png';
-import { GoProjectSymlink } from 'react-icons/go';
-import { HiOutlineDocumentMagnifyingGlass } from 'react-icons/hi2';
-import { LuGithub } from 'react-icons/lu';
 import RegularProject from './RegularProject';
-import Span from '@components/Span';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -46,7 +41,7 @@ function Projects() {
 	return (
 		<div className="text-white">
 			<motion.div
-				className="mt-10 flex flex-col items-center lg:mt-20"
+				className="flex flex-col items-center"
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="visible"

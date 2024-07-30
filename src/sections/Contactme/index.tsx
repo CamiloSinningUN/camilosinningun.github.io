@@ -29,6 +29,7 @@ function Contactme() {
 	const { sendMessage, loading, error } = useSendMessage();
 
 	const onSubmit = async (data: Message) => {
+
 		await sendMessage(data);
 		if (error) {
 			toast.error(t('toast.error'), { theme: 'colored' });
@@ -111,7 +112,11 @@ function Contactme() {
 						/>
 						<button
 							className="mt-2 w-full rounded-md bg-indigo-500 py-4 text-xl font-bold text-white transition delay-75 duration-200 ease-in-out hover:bg-indigo-600 focus:bg-indigo-600 focus:outline-none active:bg-blue-700"
-							onClick={() => !loading && handleSubmit(onSubmit)()}
+							onClick={(e) => {
+								e.preventDefault();
+								return !loading && handleSubmit(onSubmit)()
+							}
+							}
 						>
 							{!loading ? t('send') : t('sending')}
 						</button>

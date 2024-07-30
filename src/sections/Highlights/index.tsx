@@ -36,7 +36,7 @@ function Highlights() {
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.3 }}
 			>
-				<div className='mt-10 flex flex-col items-center lg:mt-20'>
+				<div className='flex flex-col items-center'>
 					<motion.div variants={itemVariants}>
 						<div className="relative mb-12">
 							<h3 className="relative text-center text-3xl font-bold tracking-tight text-verySoftRed lg:text-5xl">

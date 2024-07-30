@@ -8,11 +8,12 @@
 	},
 	"hero": {
 		"greetings": "Hi, my name is",
-		"subtitle": "Coding for",
+		"subtitle": "Coding",
 		"web": "Web",
 		"mobile": "Mobile",
+		"ai": "AI",
 		"description": "Systems Engineering student, interested in Machine Learning and web/mobile development, aspiring to learn and make an impact in technology.",
-		"button": "Contact me"
+		"button": "Resume"
 	},
 	"title": {
 		"aboutme": "About me",

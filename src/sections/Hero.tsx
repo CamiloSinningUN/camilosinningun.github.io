@@ -10,7 +10,7 @@ function Hero() {
 	const { t, i18n } = useTranslation('', { keyPrefix: 'hero' });
 	const [index, setIndex] = useState(0);
 
-	const TEXTS = useMemo(() => [t('web'), t('mobile')], [i18n.language]);
+	const TEXTS = useMemo(() => [t('web'), t('mobile'), t('ai')], [i18n.language]);
 
 	const containerVariants = {
 		hidden: {},
@@ -78,12 +78,12 @@ function Hero() {
 						variants={itemVariants}
 						className="mx-auto mt-11 flex flex-col items-center gap-4 md:flex-row lg:mx-0"
 					>
-						{/* <a
+						<a
 							href="#contactme"
 							className="flex h-16 w-60 items-center justify-center rounded-lg bg-white text-2xl font-bold text-lightBlue transition delay-75 duration-200 ease-in-out hover:scale-105  hover:shadow-white"
 						>
 							{t('button')}
-						</a> */}
+						</a>
 						<div className="flex items-center gap-4">
 							<a
 								href="https://github.com/CamiloSinningUN"

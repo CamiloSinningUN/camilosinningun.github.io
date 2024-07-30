@@ -8,11 +8,12 @@
 	},
 	"hero": {
 		"greetings": "Hola, mi nombre es",
-		"subtitle": "Programando para",
+		"subtitle": "Programando",
 		"web": "Web",
 		"mobile": "Móvil",
+		"ai": "IA",
 		"description": "Estudiante de Ingeniería de Sistemas, interesado en Aprendizaje Automático y desarrollo web/móvil, aspirando a aprender y tener un impacto en la tecnología.",
-		"button": "Contáctame"
+		"button": "Curriculum"
 	},
 	"title": {
 		"aboutme": "Sobre mí",

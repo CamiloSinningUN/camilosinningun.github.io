@@ -1,6 +1,7 @@
 import { Message } from '@interfaces/Message.interface';
-import axios from 'axios';
 import { useState } from 'react';
+import Email from '@utils/smtp.js'
+
 
 const useSendMessage = () => {
 	const [loading, setLoading] = useState(false);
@@ -8,26 +9,23 @@ const useSendMessage = () => {
 	const [data, setData] = useState(null);
 
 	const sendMessage = async (message: Message) => {
-		setLoading(true);
+		setLoading(true)
 		try {
-			const response = await axios.post(
-				import.meta.env.VITE_API,
-				message,
-				{
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					validateStatus: () => true
-				}
-			);
-			setData(response.data);
-			console.log(response.data);
+			const response = await Email.send({
+				SecureToken: import.meta.env.VITE_EMAILJS_TOKEN,
+				To: 'genericopramim@gmail.com',
+				From: 'genericopramim@gmail.com',
+				Subject: `Message from ${message.name}.`,
+				Body: `Name: ${message.name} <br/> Email: ${message.email} <br/> Message: ${message.message}`
+			})
+			setData(response)
+			console.log(response)
 		} catch (err: any) {
-			console.log(err);
-			setError(err);
+			console.log(err)
+			setError(err)
 		}
-		setLoading(false);
-	};
+		setLoading(false)
+	}
 
 	return { loading, error, data, sendMessage };
 };

@@ -5,7 +5,6 @@ import Li from '@components/Li';
 import Polimi from '@images/Polimi.png';
 import React from 'react';
 import Span from '@components/Span';
-import Udemy from '@images/Udemy.png';
 import Colfuturo from '@images/Colfuturo.ico';
 import Uninorte from '@images/Uninorte.png';
 import { motion } from 'framer-motion';

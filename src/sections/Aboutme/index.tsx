@@ -6,6 +6,7 @@ import Polimi from '@images/Polimi.png';
 import React from 'react';
 import Span from '@components/Span';
 import Udemy from '@images/Udemy.png';
+import Colfuturo from '@images/Colfuturo.ico';
 import Uninorte from '@images/Uninorte.png';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -108,9 +109,10 @@ function Aboutme() {
 
 const institutions = [
 	{
-		image: Uninorte,
-		link: 'https://www.uninorte.edu.co/',
-		alt: 'Universidad del Norte',
+		image: Polimi,
+		link: 'https://www.polimi.it/',
+		alt: 'Politecnico di Milano',
+
 		skip: 1
 	},
 	{
@@ -126,15 +128,15 @@ const institutions = [
 		skip: 0
 	},
 	{
-		image: Udemy,
-		link: 'https://www.udemy.com/certificate/UC-d555fb16-1664-4e9a-9679-c6a13ab70f5f/',
-		alt: 'Udemy',
+		image: Uninorte,
+		link: 'https://www.uninorte.edu.co/',
+		alt: 'Universidad del Norte',
 		skip: 0
 	},
 	{
-		image: Polimi,
-		link: 'https://www.polimi.it/',
-		alt: 'Politecnico di Milano',
+		image: Colfuturo,
+		link: 'https://sites.colfuturo.org/Seleccionados2024/seleccionados.php',
+		alt: 'Colfuturo',
 		skip: 3
 	}
 ];
